@@ -33,4 +33,18 @@ networks.btcz = {
   isZcash: true,
 };
 
+// TESTNET
+networks.anon = {
+  messagePrefix: '\x19ANON Signed Message:\n',
+  bip32: {
+    public: 0x043587cf,
+    private: 0x04358394,
+  },
+  pubKeyHash: 0x1cce,
+  scriptHash: 0x1cba,
+  wif: 0xef,
+  dustThreshold: 1000,
+  isZcash: true,
+};
+
 networks.safe = networks.safecoin;

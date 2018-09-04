@@ -297,6 +297,7 @@ const LoginRender = function() {
                  options={[
                     { value: 'safe', label: 'safe' },
                     { value: 'btcz', label: 'btcz' },
+                    { value: 'anon', label: 'anon' },
                    ]} />
                </div>
  

@@ -17,6 +17,10 @@ export function getCoinTitle(coin) {
       coinlogo = 'safe';
       coinname = 'Safecoin';
       break;
+    case 'ANON':
+      coinlogo = 'anon';
+      coinname = 'ANON';
+      break;
   }
 
   return {

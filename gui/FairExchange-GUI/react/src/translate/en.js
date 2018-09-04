@@ -825,6 +825,7 @@ export const LANG_EN = {
   },
   'ASSETCHAINS': {
     'BTCZ': 'BitcoinZ (BTCZ)',
+    'ANON': 'ANON (ANON)',
   },
   'DEX': {
     'GEN_NEW_PASSPHRASE': 'Generate a new passphrase',

@@ -13,6 +13,10 @@ const addCoinOptionsCrypto = () => {
       label: 'BitcoinZ (BTCZ)',
       icon: 'BTCZ',
       value: `BTCZ|spv`,
+    },{
+      label: 'ANON (ANON)',
+      icon: 'ANON',
+      value: `ANON|spv`,
     }];
 
   if (config.experimentalFeatures) {

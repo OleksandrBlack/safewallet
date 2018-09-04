@@ -21,6 +21,17 @@ let electrumServers = {
       'electrum.safc.cc:10002'
     ],
   },
+  anon: {
+    address: 'local.support',
+    port: 10003,
+    proto: 'tcp',
+    txfee: 10000,
+    abbr: 'ANON',
+    serverList: [
+      'local.support:10003',
+      'local.support:10003'
+    ],
+  },
 };
 
 module.exports = electrumServers;

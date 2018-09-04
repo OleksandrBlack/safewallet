@@ -7,7 +7,9 @@ const txDecoder = {
 module.exports = (shepherd) => {
   shepherd.isZcash = (network) => {
     if (network === 'BTCZ' ||
-        network === 'btcz') {
+        network === 'btcz' ||
+        network === 'ANON' ||
+        network === 'anon') {
       return true;
     }
   };
