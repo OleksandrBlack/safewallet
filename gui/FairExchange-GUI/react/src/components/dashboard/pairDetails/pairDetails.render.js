@@ -12,24 +12,24 @@ const PairDetailsRender = function() {
                             <table className="table dataTable table-striped white-font">
                                 <tbody>
                                     <tr>
-                                        <td><p className="text-success">BUY :</p></td>
-                                        <td><p className="text-success">{ this.props.tickers[this.props.activePair.id].ticker.buy + ' ' + this.getCurrency() }</p></td>
+                                        <td><p>BUY :</p></td>
+                                        <td><p>{ this.props.tickers[this.props.activePair.id].ticker.buy + ' ' + this.getCurrency() }</p></td>
                                     </tr>
                                     <tr>
-                                        <td><p className="text-danger">SELL :</p></td>
-                                        <td><p className="text-danger">{ this.props.tickers[this.props.activePair.id].ticker.sell + ' ' + this.getCurrency() }</p></td>
+                                        <td><p>SELL :</p></td>
+                                        <td><p>{ this.props.tickers[this.props.activePair.id].ticker.sell + ' ' + this.getCurrency() }</p></td>
                                     </tr>
                                     <tr>
                                         <td><p>LAST :</p></td>
                                         <td><p>{ this.props.tickers[this.props.activePair.id].ticker.last + ' ' + this.getCurrency() }</p></td>
                                     </tr>
                                     <tr>
-                                        <td><p className="text-success">24HR HIGH :</p></td>
-                                        <td><p className="text-success">{ this.props.tickers[this.props.activePair.id].ticker.high + ' ' + this.getCurrency() }</p></td>
+                                        <td><p>24HR HIGH :</p></td>
+                                        <td><p>{ this.props.tickers[this.props.activePair.id].ticker.high + ' ' + this.getCurrency() }</p></td>
                                     </tr>
                                     <tr>
-                                        <td><p className="text-danger">24HR LOW :</p></td>
-                                        <td><p className="text-danger">{ this.props.tickers[this.props.activePair.id].ticker.low + ' ' + this.getCurrency() }</p></td>
+                                        <td><p>24HR LOW :</p></td>
+                                        <td><p>{ this.props.tickers[this.props.activePair.id].ticker.low + ' ' + this.getCurrency() }</p></td>
                                     </tr>
                                     <tr>
                                         <td><p>24HR VOLUME :</p></td>

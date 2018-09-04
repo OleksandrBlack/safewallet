@@ -23,6 +23,7 @@ import ClaimInterestModal from '../claimInterestModal/claimInterestModal';
 import SafeTrade from '../safeTrade/safeTrade';
 import PairTile from '../pairTile/pairTile';
 import SafeVote from '../safeVote/safeVote';
+import Swissknife from '../swissknife/swissknife';
 
 const DashboardRender = function() {
   return (
@@ -44,17 +45,20 @@ const DashboardRender = function() {
           <WalletsTxInfo />
           <WalletsMain />
         </div>
-        { this.props.SafeTrade &&
+        { this.props.SafeTrade && this.props.SafeTrade.tickers &&
           <div className={ this.isSectionActive('safetrade') ? 'show' : 'hide' }> 
             <PairTile />         
             <SafeTrade />
           </div>
         }
-        { this.props.SafeVote &&
+        { this.props.SafeVote && this.props.SafeVote.items &&
           <div className={ this.isSectionActive('safevote') ? 'show' : 'hide' }>
             <SafeVote />
           </div>
         }
+        <div className={ this.isSectionActive('swissknife') ? 'show' : 'hide' }>        
+          <Swissknife />
+        </div>
         { this.isSectionActive('edex') &&
           <EDEX />
         }

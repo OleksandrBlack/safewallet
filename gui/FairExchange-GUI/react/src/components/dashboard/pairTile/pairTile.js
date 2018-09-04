@@ -70,7 +70,6 @@ class PairTile extends React.Component {
     }
 
     filterMarkets(event){
-        console.log(event.target.value);
         this.setState({
             markets: event.target.value,
         });

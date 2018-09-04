@@ -4,7 +4,7 @@ import PairDetailsRender from './pairDetails.render';
 
 class PairDetails extends React.Component {
     render() {
-        if (this.props.activePair && this.props.tickers[this.props.activePair.id]){
+        if (this.props.activePair && this.props.tickers && this.props.tickers[this.props.activePair.id]){
             return PairDetailsRender.call(this);
         } else {
             return null;
