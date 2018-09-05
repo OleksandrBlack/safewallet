@@ -9,7 +9,9 @@ module.exports = (shepherd) => {
     if (network === 'BTCZ' ||
         network === 'btcz' ||
         network === 'ANON' ||
-        network === 'anon') {
+        network === 'anon' ||
+        network === 'ZCL' ||
+        network === 'zcl') {
       return true;
     }
   };

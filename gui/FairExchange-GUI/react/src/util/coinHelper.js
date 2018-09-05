@@ -10,16 +10,20 @@ export function getCoinTitle(coin) {
       coinlogo = 'btcz';
       coinname = 'BitcoinZ';
       break;
+    case 'ANON':
+      coinlogo = 'anon';
+      coinname = 'ANON';
+      break;
+    case 'ZCL':
+      coinlogo = 'zcl';
+      coinname = 'ZCL';
+      break;
     case 'SAFE':
       hideTitle = true;
       titleBG = true;
       transparentBG = true;
       coinlogo = 'safe';
       coinname = 'Safecoin';
-      break;
-    case 'ANON':
-      coinlogo = 'anon';
-      coinname = 'ANON';
       break;
   }
 

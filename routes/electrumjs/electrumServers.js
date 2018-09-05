@@ -32,6 +32,17 @@ let electrumServers = {
       'local.support:10003'
     ],
   },
+  zcl: {
+    address: 'electrum.zclassic.org',
+    port: 5222,
+    proto: 'tcp',
+    txfee: 10000,
+    abbr: 'ZCL',
+    serverList: [
+      'electrum.zclassic.org:5222',
+      'zcl-electrum.com:50002'
+    ],
+  },
 };
 
 module.exports = electrumServers;

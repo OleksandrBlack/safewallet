@@ -17,6 +17,10 @@ const addCoinOptionsCrypto = () => {
       label: 'ANON (ANON)',
       icon: 'ANON',
       value: `ANON|spv`,
+    },{
+      label: 'ZCL (ZClassic)',
+      icon: 'ZCL',
+      value: `ZCL|spv`,
     }];
 
   if (config.experimentalFeatures) {

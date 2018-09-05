@@ -298,6 +298,7 @@ const LoginRender = function() {
                     { value: 'safe', label: 'safe' },
                     { value: 'btcz', label: 'btcz' },
                     { value: 'anon', label: 'anon' },
+                    { value: 'zcl', label: 'zcl' },
                    ]} />
                </div>
  
