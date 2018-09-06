@@ -47,17 +47,18 @@ networks.anon = {
   isZcash: true,
 };
 
-networks.zcl = {
+networks.zclassic = {
   messagePrefix: '\x19Zclassic Signed Message:\n',
   bip32: {
-    public: 0x0488B21E,
-    private: 0x0488ADE4,
+    public: 0x043587cf,
+    private: 0x04358394,
   },
-  pubKeyHash: 0x1CB8,
-  scriptHash: 0x1CBD,
-  wif: 0x80,
+  pubKeyHash: 0x1d25,
+  scriptHash: 0x1cba,
+  wif: 0xef,
   dustThreshold: 1000,
   isZcash: true,
 };
 
 networks.safe = networks.safecoin;
+networks.zcl = networks.zclassic;

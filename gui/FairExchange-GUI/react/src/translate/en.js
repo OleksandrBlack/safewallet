@@ -824,8 +824,10 @@ export const LANG_EN = {
     'USD': 'US Dollar (USD)',
   },
   'ASSETCHAINS': {
+    'SAFE': 'SafeCoin (SAFE)',
     'BTCZ': 'BitcoinZ (BTCZ)',
     'ANON': 'ANON (ANON)',
+    'ZCL': 'ZClassic (ZCL)',
   },
   'DEX': {
     'GEN_NEW_PASSPHRASE': 'Generate a new passphrase',

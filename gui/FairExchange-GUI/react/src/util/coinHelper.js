@@ -16,14 +16,14 @@ export function getCoinTitle(coin) {
       break;
     case 'ZCL':
       coinlogo = 'zcl';
-      coinname = 'ZCL';
+      coinname = 'ZClassic';
       break;
     case 'SAFE':
       hideTitle = true;
       titleBG = true;
       transparentBG = true;
       coinlogo = 'safe';
-      coinname = 'Safecoin';
+      coinname = 'SafeCoin';
       break;
   }
 
