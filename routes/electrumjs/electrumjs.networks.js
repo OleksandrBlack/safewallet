@@ -50,12 +50,12 @@ networks.anon = {
 networks.zclassic = {
   messagePrefix: '\x19Zclassic Signed Message:\n',
   bip32: {
-    public: 0x043587cf,
-    private: 0x04358394,
+    public: 0x0488B21E,
+    private: 0x0488ADE4,
   },
-  pubKeyHash: 0x1d25,
-  scriptHash: 0x1cba,
-  wif: 0xef,
+  pubKeyHash: 0x1CB8,
+  scriptHash: 0x1CBD,
+  wif: 0x80,
   dustThreshold: 1000,
   isZcash: true,
 };

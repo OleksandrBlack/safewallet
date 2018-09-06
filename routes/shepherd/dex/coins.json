@@ -1,1 +1,1 @@
-[{"coin":"BTCZ","name":"bitcoinz","rpcport":1979,"taddr":28,"pubtype":184,"p2shtype":189,"wiftype":128,"txfee":10000}]
+[{"coin":"BTCZ","name":"bitcoinz","rpcport":1979,"taddr":28,"pubtype":184,"p2shtype":189,"wiftype":128,"txfee":10000},{"coin":"ZCL","name":"zclassic","rpcport":8033,"taddr":28,"pubtype":184,"p2shtype":189,"wiftype":128,"txfee":10000}]
