@@ -4,7 +4,7 @@ const explorerList = {
   SAFE: 'https://explorer.safecoin.org',
   BTCZ: 'https://explorer.bitcoinz.site',
   ANON: 'https://explorer.anonymousbitcoin.io', //TODO
-  ZCL: 'http://explorer.zclassicblue.org:3001/insight',
+  ZCL: 'http://explorer.zclassicblue.org:3001/insight/',
   XSG: 'https://insight.snowgem.org',
 };
 

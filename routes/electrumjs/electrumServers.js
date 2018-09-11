@@ -29,7 +29,8 @@ let electrumServers = {
     abbr: 'ANON',
     serverList: [
       'local.support:20003',
-      '45.63.13.60:20003'
+      '45.63.13.60:20003',
+      'electrum.safc.cc:20003'
     ],
   },
   zcl: {
@@ -40,7 +41,8 @@ let electrumServers = {
     abbr: 'ZCL',
     serverList: [
       'local.support:40001',
-      '45.63.13.60:40001'
+      '45.63.13.60:40001',
+      'electrum.safc.cc:40001'
     ],
   },
   xsg: {
@@ -48,10 +50,11 @@ let electrumServers = {
     port: 50001,
     proto: 'tcp',
     txfee: 10000,
-    abbr: 'ZCL',
+    abbr: 'XSG',
     serverList: [
       'local.support:50001',
-      '45.63.13.60:50001'
+      '45.63.13.60:50001',
+      'electrum.safc.cc:50001'
     ],
   },
 };

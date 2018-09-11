@@ -18,7 +18,7 @@ module.exports = (shepherd) => {
     }
   };
 
-//  shepherd.isPos = (network) => {
+  shepherd.isPos = (network) => {
 //    if (network === 'BLK' ||
 //        network === 'blk' ||
 //        network === 'DNR' ||
@@ -27,7 +27,7 @@ module.exports = (shepherd) => {
 //        network === 'xwc') {
 //      return true;
 //    }
-//  };
+};
 
   shepherd.electrumJSTxDecoder = (rawtx, networkName, network, insight) => {
     if (shepherd.isZcash(networkName)) {
