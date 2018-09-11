@@ -21,6 +21,10 @@ const addCoinOptionsCrypto = () => {
       label: 'ZClassic (ZCL)',
       icon: 'ZCL',
       value: `ZCL|spv`,
+    },{
+      label: 'SnowGem (XSG)',
+      icon: 'XSG',
+      value: `XSG|spv`,
     }];
 
   if (config.experimentalFeatures) {

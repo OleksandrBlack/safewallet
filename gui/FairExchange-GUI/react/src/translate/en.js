@@ -828,6 +828,7 @@ export const LANG_EN = {
     'BTCZ': 'BitcoinZ (BTCZ)',
     'ANON': 'ANON (ANON)',
     'ZCL': 'ZClassic (ZCL)',
+    'XSG': 'SnowGem (XSG)',
   },
   'DEX': {
     'GEN_NEW_PASSPHRASE': 'Generate a new passphrase',

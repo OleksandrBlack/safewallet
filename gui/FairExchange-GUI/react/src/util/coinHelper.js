@@ -6,6 +6,10 @@ export function getCoinTitle(coin) {
   let hideTitle = false;
 
   switch (coin) {
+    case 'XSG':
+      coinlogo = 'xsg';
+      coinname = 'SnowGem';
+      break;
     case 'BTCZ':
       coinlogo = 'btcz';
       coinname = 'BitcoinZ';

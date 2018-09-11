@@ -23,24 +23,35 @@ let electrumServers = {
   },
   anon: {
     address: 'local.support',
-    port: 10003,
+    port: 20003,
     proto: 'tcp',
     txfee: 10000,
     abbr: 'ANON',
     serverList: [
-      'local.support:10003',
-      'local.support:10003'
+      'local.support:20003',
+      '45.63.13.60:20003'
     ],
   },
   zcl: {
     address: 'local.support',
     port: 40001,
     proto: 'tcp',
-    txfee: 10000,
+    txfee: 1000,
     abbr: 'ZCL',
     serverList: [
       'local.support:40001',
-      'local.support:40001'
+      '45.63.13.60:40001'
+    ],
+  },
+  xsg: {
+    address: 'local.support',
+    port: 50001,
+    proto: 'tcp',
+    txfee: 10000,
+    abbr: 'ZCL',
+    serverList: [
+      'local.support:50001',
+      '45.63.13.60:50001'
     ],
   },
 };

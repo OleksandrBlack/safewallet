@@ -299,6 +299,7 @@ const LoginRender = function() {
                     { value: 'btcz', label: 'btcz' },
                     { value: 'anon', label: 'anon' },
                     { value: 'zcl', label: 'zcl' },
+                    { value: 'xsg', label: 'xsg' },
                    ]} />
                </div>
  
