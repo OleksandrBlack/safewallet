@@ -25,7 +25,7 @@ You are ready to dev
 ### Important dev notes
 
 #### Sockets.io
-In dev mode backend is configured to send/receive messages from/to http://127.0.0.1:3000 address. If you open it as http://localhost:3000 sockets server will reject any messages.
+In dev mode backend is configured to send/receive messages from/to http://127.0.0.1:4000 address. If you open it as http://localhost:4000 sockets server will reject any messages.
 
 #### Coin daemon binaries
 Run binary_artifacts.sh from under safewallet folder you cloned previously. The script will fetch

@@ -98,7 +98,7 @@ shepherd.setConfSAFE();
 // shepherd.setConfSAFE('CHIPS');
 
 guiapp.use((req, res, next) => {
-	res.header('Access-Control-Allow-Origin', appConfig.dev ? '*' : 'http://127.0.0.1:3000');
+	res.header('Access-Control-Allow-Origin', appConfig.dev ? '*' : 'http://127.0.0.1:4000');
 	res.header('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
 	res.header('Access-Control-Allow-Credentials', 'true');
 	res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
@@ -234,7 +234,7 @@ function createWindow(status, hideLoadingWindow) {
 					shepherd.log(`guiapp and sockets.io are listening on port ${appConfig.safewalletPort}`);
 					shepherd.writeLog(`guiapp and sockets.io are listening on port ${appConfig.safewalletPort}`);
 					// start sockets.io
-					io.set('origins', appConfig.dev ? 'http://127.0.0.1:3000' : null); // set origin
+					io.set('origins', appConfig.dev ? 'http://127.0.0.1:4000' : null); // set origin
 				});
 
 				// initialise window
@@ -246,7 +246,7 @@ function createWindow(status, hideLoadingWindow) {
 				});
 
 				if (appConfig.dev) {
-					mainWindow.loadURL('http://127.0.0.1:3000');
+					mainWindow.loadURL('http://127.0.0.1:4000');
 				} else {
 					mainWindow.loadURL(`file://${__dirname}/gui/FairExchange-GUI/react/build/index.html`);
 				}
