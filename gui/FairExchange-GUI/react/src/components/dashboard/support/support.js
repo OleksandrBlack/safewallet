@@ -13,8 +13,8 @@ class Support extends React.Component {
   render() {
     return (
       <div className="page margin-left-0">
-        <div className="page-content safe-title">
-          <h2 className="safe-title">{ translate('SETTINGS.SUPPORT') }</h2>
+        <div className="page-content">
+          <h2>{ translate('SETTINGS.SUPPORT') }</h2>
           <div className="row">
             <div className="col-sm-12 no-padding-left">
               <div className="support-box-wrapper">
@@ -22,29 +22,32 @@ class Support extends React.Component {
                   className="support-box"
                   onClick={ () => this.openExternalWindow('http://support.safecoin.org') }>
                   <img
-                    src="assets/images/cryptologo/safe.png"
+                    src="assets/images/cryptologo/fairexchange.png"
                     alt={ translate('SETTINGS.SUPPORT_TICKETS') } />
                   <div className="support-box-title">{ translate('SETTINGS.SUPPORT_TICKETS') }</div>
+                  <div className="support-box-link">support.ipv6admin.com</div>
                 </div>
               </div>
               <div className="support-box-wrapper">
                 <div
                   className="support-box"
-                  onClick={ () => this.openExternalWindow('https://discordapp.com/invite/vQgYGJz') }>
+                  onClick={ () => this.openExternalWindow('https://discord.gg/wvteEF3') }>
                   <img
-                    src="assets/images/support/discord"
-                    alt="Discord" />
+                    src="assets/images/support/slack-icon.png"
+                    alt="Slack" />
                   <div className="support-box-title">Discord</div>
+                  <div className="support-box-link">sprnt.slack.com</div>
                 </div>
               </div>
               <div className="support-box-wrapper">
                 <div
                   className="support-box"
-                  onClick={ () => this.openExternalWindow('https://t.me/joinchat/HCqlLxEEFR_SQPd9VjSpBw') }>
+                  onClick={ () => this.openExternalWindow('https://discord.gg/wvteEF3') }>
                   <img
-                    src="assets/images/support/telegram.png"
-                    alt="Telegram"/>
-                  <div className="support-box-title">Telegram</div>
+                    src="assets/images/support/slack-invite-icon.png"
+                    alt={ translate('SETTINGS.GET_SLACK_INVITE') } />
+                  <div className="support-box-title">{ translate('SETTINGS.GET_SLACK_INVITE') }</div>
+            <div className="support-box-link">discord.gg/wvteEF3</div>
                 </div>
               </div>
               <div className="support-box-wrapper">
@@ -55,6 +58,7 @@ class Support extends React.Component {
                     src="assets/images/support/github-icon.png"
                     alt="Github" />
                   <div className="support-box-title">Github</div>
+                  <div className="support-box-link">github.com/fair-exchange/Safewallet</div>
                 </div>
               </div>
             </div>

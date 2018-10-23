@@ -15,7 +15,7 @@ const WalletsHeaderRender = function() {
         </li>
         <li className={ !this.isActiveSectionJumblr() ? 'hide' : 'header-fairexchange-section' }>
           <img src="assets/images/native/jumblr_header_title_logo.png" /><br />
-          <div className="safe-title">{ translate('SIDEBAR.JUMBLR_MOTTO') }</div>
+          { translate('SIDEBAR.JUMBLR_MOTTO') }
         </li>
       </ol>
     </div>

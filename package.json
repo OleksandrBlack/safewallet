@@ -2,7 +2,7 @@
   "name": "safewallet-app",
   "productName": "Safewallet",
   "version": "0.2.35",
-  "description": "Safewallet Desktop App",
+  "description": "Safewallet Wallet Desktop App",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -21,10 +21,10 @@
     "spv",
     "jumblr"
   ],
-  "author": "SafeCoin DEV Team",
+  "author": "SuperNET Team",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^1.8.7"
+    "electron": "^1.8.4"
   },
   "dependencies": {
     "adm-zip": "^0.4.7",
@@ -32,8 +32,8 @@
     "async": "^2.6.0",
     "bigi": "^1.4.2",
     "bip39": "^2.5.0",
-    "bitcoinforkjs-lib": "git://github.com/Fair-Exchange/bitcoinforkjs-lib.git",
-    "bitcoinjs-lib": "git://github.com/Fair-Exchange/bitcoinjs-lib.git",
+    "bitcoinforkjs-lib": "git://github.com/Fair-Exchange/bitcoinforkjs-lib",
+    "bitcoinjs-lib": "git://github.com/Fair-Exchange/bitcoinjs-lib",
     "bitcoinjs-lib-pos": "git://github.com/Fair-Exchange/bitcoinjs-lib-pos",
     "bitcoinjs-lib-zcash": "git://github.com/pbca26/bitcoinjs-lib#zcash",
     "bluebird": "^3.4.7",
@@ -59,8 +59,7 @@
     "sha256": "^0.2.0",
     "socket.io": "^1.7.3",
     "tx-decoder": "git://github.com/pbca26/tx-decoder",
-    "webpack": "^2.7.0",
-    "wif": "^2.0.6",
-    "cors-anywhere": "0.4.1"
+    "webpack": "^4.6.0",
+    "wif": "^2.0.6"
   }
 }

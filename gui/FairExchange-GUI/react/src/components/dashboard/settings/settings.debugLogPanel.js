@@ -65,12 +65,12 @@ class DebugLogPanel extends React.Component {
     let _items = [];
 
     for (let i = 0; i < _appRuntimeLog.length; i++) {
-        _items.push(
-          <p key={ `app-runtime-log-entry-${i}` }>
-            <span>{ secondsToString(_appRuntimeLog[i].time, true) }</span>
-            <span className="padding-left-30">{ _appRuntimeLog[i].msg.indexOf('{') === -1 ? _appRuntimeLog[i].msg : JSON.stringify(_appRuntimeLog[i].msg, null, '') }</span>
-          </p>
-        );      
+      _items.push(
+        <p key={ `app-runtime-log-entry-${i}` }>
+          <span>{ secondsToString(_appRuntimeLog[i].time, true) }</span>
+          <span className="padding-left-30">{ _appRuntimeLog[i].msg.indexOf('{') === -1 ? _appRuntimeLog[i].msg : JSON.stringify(_appRuntimeLog[i].msg, null, '') }</span>
+        </p>
+      );
     }
 
     return _items;
@@ -191,7 +191,7 @@ class DebugLogPanel extends React.Component {
               <div className="form-group form-material floating">
                 <input
                   type="text"
-                  className="form-control white-font"
+                  className="form-control"
                   name="debugLinesCount"
                   id="readDebugLogLines"
                   value={ this.state.debugLinesCount }
@@ -202,7 +202,7 @@ class DebugLogPanel extends React.Component {
               </div>
               <div className="form-group form-material floating">
                 <select
-                  className="form-control form-material white-font"
+                  className="form-control form-material"
                   name="debugTarget"
                   id="settingsDelectDebugLogOptions"
                   onChange={ this.updateInput }>
@@ -221,7 +221,7 @@ class DebugLogPanel extends React.Component {
               </div>
               <div className="row">
                 <div className="col-sm-12 col-xs-12 text-align-left">
-                  <div className="padding-top-40 padding-bottom-20 horizontal-padding-0 ">{ this.renderDebugLogData() }</div>
+                  <div className="padding-top-40 padding-bottom-20 horizontal-padding-0">{ this.renderDebugLogData() }</div>
                 </div>
               </div>
             </div>

@@ -18,7 +18,7 @@ const electrumServersList = {
   "HODL": [{"electrum2.ipv6admin.com":10009},{"electrum1.ipv6admin.com":10009}],
   "HUSH": [{"173.212.225.176": 50013},{"136.243.45.140": 50013}],
   "JUMBLR": [{"electrum2.ipv6admin.com": 10004},{"electrum1.ipv6admin.com": 10004}],
-  "SAFE": [{"local.support":10001},{"45.63.13.60":10001}],
+  "SAFE": [{"electrum2.ipv6admin.com":10001},{"electrum1.ipv6admin.com":10001}],
   "LTC": [{"173.212.225.176": 50012},{"136.243.45.140": 50012}],
   "MNZ": [{"electrum2.ipv6admin.com":10002},{"electrum1.ipv6admin.com":10002}],
   "MONA": [{"173.212.225.176": 50002},{"136.243.45.140": 50002}],

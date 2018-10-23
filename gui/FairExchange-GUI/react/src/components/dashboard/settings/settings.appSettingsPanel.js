@@ -180,7 +180,6 @@ class AppSettingsPanel extends React.Component {
                 <td className="padding-15">
                   { this.state.appConfigSchema[key][_key].type === 'number' &&
                     <input
-                      className="grey-font"
                       type="number"
                       pattern="[0-9]*"
                       name={ `${key}__${_key}` }
@@ -189,7 +188,6 @@ class AppSettingsPanel extends React.Component {
                   }
                   { (this.state.appConfigSchema[key][_key].type === 'string' || this.state.appConfigSchema[key][_key].type === 'folder') &&
                     <input
-                      className="grey-font"
                       type="text"
                       name={ `${key}__${_key}` }
                       value={ _appConfig[key][_key] }
@@ -236,7 +234,6 @@ class AppSettingsPanel extends React.Component {
               <td className="padding-15">
                 { this.state.appConfigSchema[key].type === 'number' &&
                   <input
-                    className="grey-font"
                     type="number"
                     pattern="[0-9]*"
                     name={ `${key}` }
@@ -245,7 +242,6 @@ class AppSettingsPanel extends React.Component {
                 }
                 { (this.state.appConfigSchema[key].type === 'string' || this.state.appConfigSchema[key].type === 'folder') &&
                   <input
-                    className="grey-font"
                     type="text"
                     name={ `${key}` }
                     value={ _appConfig[key] }
@@ -269,7 +265,7 @@ class AppSettingsPanel extends React.Component {
                 { this.state.appConfigSchema[key].type === 'select' &&
                   Config.experimentalFeatures &&
                   <select
-                    className="form-control select-settings grey-font"
+                    className="form-control select-settings"
                     name={ `${key}` }
                     value={ _appConfig[key] }
                     onChange={ (event) => this.updateInputSettings(event, key) }>

@@ -177,19 +177,7 @@ export function shepherdHerd(coin, mode, path, startupParams) {
       'ac_name': 'safecoind',
       'ac_options': [
         '-daemon=0',
-        '-addnode=107.191.36.192',
-        '-addnode=140.82.45.57',
-        '-addnode=dnsseed.safecoin.org',
-        '-addnode=dnsseed.ipv6admin.com',
-        '-addnode=dnsseed.fair.exchange',
-        '-addnode=45.63.13.60',
-        '-addnode=217.69.1.223',
-        '-addnode=51.255.95.53',
-        '-addnode=45.55.45.68',
-        '-addnode=8.12.22.254',
-        '-addnode=104.225.223.62',
-        '-addnode=108.61.23.239',
-        '-addnode=190.2.144.43',
+        '-addnode=78.47.196.146',
       ],
     };
   }

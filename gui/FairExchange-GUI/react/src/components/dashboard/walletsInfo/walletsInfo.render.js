@@ -15,7 +15,7 @@ const WalletsInfoRender = function() {
         _peerItems.push(
           <table
             key={ `native-net-peers-${i}` }
-            className="table table-striped  white-font">
+            className="table table-striped">
             <tbody>
               <tr>
                 <td>{ _netPeers[i].id }</td>
@@ -144,10 +144,10 @@ const WalletsInfoRender = function() {
         <div className="col-xlg-6 col-md-4">
           <div className="panel">
             <div className="panel-heading">
-              <h3 className="panel-title safe-title">{ translate('INDEX.WALLET_INFO') }</h3>
+              <h3 className="panel-title">{ translate('INDEX.WALLET_INFO') }</h3>
             </div>
             <div className="table-responsive">
-              <table className="table table-striped white-font">
+              <table className="table table-striped">
                 <tbody>
                   <tr>
                     <td>{ translate('INDEX.WALLET_VERSION') }</td>
@@ -177,14 +177,24 @@ const WalletsInfoRender = function() {
               </table>
             </div>
           </div>
-          
+          { this.props.ActiveCoin.coin === 'SAFE' &&
+            this.displayClaimInterestUI() &&
+            <div>
+              <button
+                type="button"
+                className="btn btn-success waves-effect waves-light margin-top-20 btn-next"
+                onClick={ () => this.openClaimInterestModal() }>
+                  <i className="icon fa-dollar"></i> { translate('CLAIM_INTEREST.CLAIM_INTEREST', ' ') }
+              </button>
+            </div>
+          }
           <div className="panel">
             <div className="panel-heading">
-              <h3 className="panel-title safe-title">{ translate('WALLETS_INFO.NETWORK_TOTALS') }</h3>
+              <h3 className="panel-title">{ translate('WALLETS_INFO.NETWORK_TOTALS') }</h3>
             </div>
             <div className="table-responsive">
               { _netTotals &&
-                <table className="table table-striped white-font">
+                <table className="table table-striped">
                   <tbody>
                     <tr>
                       <td>{ translate('WALLETS_INFO.TIME') }</td>
@@ -216,13 +226,13 @@ const WalletsInfoRender = function() {
         <div className="col-xlg-6 col-md-8">
           <div className="panel">
             <div className="panel-heading">
-              <h3 className="panel-title safe-title">
+              <h3 className="panel-title">
                 { this.props.ActiveCoin.coin === 'SAFE' ? 'Safecoin' : `${this.props.ActiveCoin.coin}` }&nbsp;
                 { translate('INDEX.INFO') }
               </h3>
             </div>
             <div className="table-responsive">
-              <table className="table table-striped white-font">
+              <table className="table table-striped">
                 <tbody>
                   <tr>
                     <td>{ translate('INDEX.VERSION') }</td>
@@ -317,7 +327,7 @@ const WalletsInfoRender = function() {
         <div className="col-xlg-12 col-md-12">
           <div className="panel">
             <div className="panel-heading">
-              <h3 className="panel-title safe-title">
+              <h3 className="panel-title">
                 { translate('WALLETS_INFO.PEERS') }
               </h3>
             </div>
@@ -325,7 +335,7 @@ const WalletsInfoRender = function() {
               <div>{ translate('WALLETS_INFO.LOADING') }</div>
             }
             { _netPeers &&
-              <div className="table-responsive white-font">
+              <div className="table-responsive">
                 { _peerItems }
               </div>
             }
@@ -342,10 +352,10 @@ const WalletsInfoRender = function() {
         <div className="col-xlg-6 col-md-6">
           <div className="panel">
             <div className="panel-heading">
-              <h3 className="panel-title safe-title">{ translate('INDEX.WALLET_INFO') }</h3>
+              <h3 className="panel-title">{ translate('INDEX.WALLET_INFO') }</h3>
             </div>
             <div className="table-responsive">
-              <table className="table table-striped white-font">
+              <table className="table table-striped">
                 <tbody>
                   <tr>
                     <td>{ translate('INDEX.SPV_SERVER_IP') }</td>
@@ -386,7 +396,19 @@ const WalletsInfoRender = function() {
                 </tbody>
               </table>
             </div>
-          </div>          
+          </div>
+          { this.props.ActiveCoin.coin === 'SAFE' &&
+            this.props.ActiveCoin.mode !== 'spv' &&
+            <div>
+              <button
+                type="button"
+                className="btn btn-success waves-effect waves-light margin-top-20 btn-next"
+                onClick={ () => this.openClaimInterestModal() }>
+                { translate('CLAIM_INTEREST.CLAIM_INTEREST', ' ') }
+              </button>
+              <ClaimInterestModal />
+            </div>
+          }
         </div>
       </div>
     );

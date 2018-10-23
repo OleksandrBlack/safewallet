@@ -10,8 +10,6 @@ import { Settings } from './settings';
 import { Interval } from './interval';
 import { Login } from './login';
 import { Dex } from './dex';
-import { SafeTrade } from './safeTrade';
-import { SafeVote } from './safeVote';
 
 const appReducer = combineReducers({
   AddCoin,
@@ -23,8 +21,6 @@ const appReducer = combineReducers({
   Interval,
   Login,
   Dex,
-  SafeTrade,
-  SafeVote,
   routing: routerReducer,
 });
 

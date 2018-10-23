@@ -1,7 +1,6 @@
 const fs = require('fs-extra');
 const path = require('path');
 let _foldersInitRan = false;
-const cors_proxy = require('cors-anywhere');
 
 module.exports = (shepherd) => {
   shepherd.readVersionFile = () => {
@@ -66,16 +65,6 @@ module.exports = (shepherd) => {
 
       _foldersInitRan = true;
     }
-  }
-
-  shepherd.startCorsProxy = () => {
-    var host = 'localhost';
-    var port = 17778;
-    cors_proxy.createServer({
-      originWhitelist: [],
-    }).listen(port, host, function() {
-      shepherd.log('CORS Anywhere running on ' + host + ':' + port);
-    });
   }
 
   return shepherd;

@@ -4,16 +4,10 @@ import DashboardRender from './dashboard.render';
 import {
   toggleZcparamsFetchModal,
   triggerToaster,
-  safeVote,
-  safeTradePairList,  
-  safeTradeTickerList,
 } from '../../../actions/actionCreators';
 import { zcashParamsCheckErrors } from '../../../util/zcashParams';
 import Store from '../../../store';
 import mainWindow from '../../../util/mainWindow';
-
-const SAFE_VOTE_UPDATE_INTERVAL = 300000;
-const SAFE_TRADE_UPDATE_INTERVAL = 900000;
 
 class Dashboard extends React.Component {
   constructor() {
@@ -46,30 +40,6 @@ class Dashboard extends React.Component {
       this.setState({
         zcashParamsVerifyTriggered: false,
       });
-    }
-  }
-
-  componentWillMount(){
-    Store.dispatch(safeVote());
-    this.safeVoteInterval = setInterval(() => {
-      Store.dispatch(safeVote());
-    }, SAFE_VOTE_UPDATE_INTERVAL);
-
-    Store.dispatch(safeTradePairList());
-    Store.dispatch(safeTradeTickerList()); 
-      this.safeTradeInterval = setInterval(() => {
-        Store.dispatch(safeTradePairList());
-        Store.dispatch(safeTradeTickerList());
-    }, SAFE_TRADE_UPDATE_INTERVAL);
-  }
-
-  componentWillUnmount(){
-    if (this.safeVoteInterval){
-        clearInterval(this.safeVoteInterval);
-    }
-
-    if (this.safeTradeInterval){
-      clearInterval(this.safeTradeInterval);
     }
   }
 
@@ -132,8 +102,6 @@ const mapStateToProps = (state) => {
       mode: state.ActiveCoin.mode,
     },
     Dashboard: state.Dashboard,
-    SafeTrade: state.SafeTrade,
-    SafeVote: state.SafeVote,
   };
 };
 

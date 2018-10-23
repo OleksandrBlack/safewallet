@@ -28,13 +28,13 @@ class AppInfoPanel extends React.Component {
       return (
         <div className="row">
           <div className="col-sm-12 padding-top-15">
-            <h3 className="safe-title">{ translate('SETTINGS.APP_RELEASE') }</h3>
+            <h5>{ translate('SETTINGS.APP_RELEASE') }</h5>
             <p>
               { translate('SETTINGS.NAME') }: { this.props.Settings.appInfo.releaseInfo.name }
               <br />
               { translate('SETTINGS.VERSION') }: { `${this.props.Settings.appInfo.releaseInfo.version.replace('version=', '')}${mainWindow.arch === 'x64' ? '' : '-32bit'}-beta` }
             </p>
-            <h3 className="safe-title">{ translate('SETTINGS.SYS_INFO') }</h3>
+            <h5>{ translate('SETTINGS.SYS_INFO') }</h5>
             <p>
               { translate('SETTINGS.ARCH') }: { this.props.Settings.appInfo.sysInfo.arch }
               <br />
@@ -51,7 +51,7 @@ class AppInfoPanel extends React.Component {
               { translate('SETTINGS.MEM') }: { this.props.Settings.appInfo.sysInfo.totalmem_readable }
             </p>
             { mainWindow.arch === 'x64' &&
-              <h3 className="safe-title">{ translate('SETTINGS.LOCATIONS') }</h3>
+              <h5>{ translate('SETTINGS.LOCATIONS') }</h5>
             }
             { mainWindow.arch === 'x64' &&
               <p>
@@ -67,7 +67,7 @@ class AppInfoPanel extends React.Component {
               </p>
             }
             { mainWindow.arch === 'x64' &&
-              <h3 className="safe-title">{ translate('SETTINGS.DAEMON_PORTS') }</h3>
+              <h5>{ translate('SETTINGS.DAEMON_PORTS') }</h5>
             }
             { mainWindow.arch === 'x64' &&
               <p>{ _items }</p>

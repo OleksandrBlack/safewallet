@@ -23,22 +23,22 @@ const WalletsTxInfoRender = function(txInfo) {
                 <ul className="nav nav-tabs nav-tabs-line">
                   <li className={ this.state.activeTab === 0 ? 'active' : '' }>
                     <a onClick={ () => this.openTab(0) }>
-                      <i className="icon md-balance-wallet"></i><span className="white-font">TxID Info</span>
+                      <i className="icon md-balance-wallet"></i>TxID Info
                     </a>
                   </li>
                   <li className={ this.state.activeTab === 1 ? 'hide active' : 'hide' }>
                     <a onClick={ () => this.openTab(1) }>
-                      <i className="icon md-plus-square"></i><span className="white-font">Vjointsplits, Details</span>
+                      <i className="icon md-plus-square"></i>Vjointsplits, Details
                     </a>
                   </li>
                   <li className={ this.state.activeTab === 2 ? 'active' : '' }>
                     <a onClick={ () => this.openTab(2) }>
-                      <i className="icon wb-briefcase"></i><span className="white-font">Hex</span>
+                      <i className="icon wb-briefcase"></i>Hex
                     </a>
                   </li>
                   <li className={ this.state.activeTab === 3 ? 'active' : '' }>
                     <a onClick={ () => this.openTab(3) }>
-                      <i className="icon wb-file"></i><span className="white-font">Raw info</span>
+                      <i className="icon wb-file"></i>Raw info
                     </a>
                   </li>
                 </ul>
@@ -47,7 +47,7 @@ const WalletsTxInfoRender = function(txInfo) {
                     <div className="tab-content">
                       { this.state.activeTab === 0 &&
                         <div className="tab-pane active">
-                          <table className="table table-striped white-font">
+                          <table className="table table-striped">
                             <tbody>
                               <tr>
                                 <td>{ this.capitalizeFirstLetter(translate('TX_INFO.ADDRESS')) }</td>
@@ -129,7 +129,7 @@ const WalletsTxInfoRender = function(txInfo) {
                       }
                       { this.state.activeTab === 1 &&
                         <div className="tab-pane active">
-                          <table className="table table-striped white-font">
+                          <table className="table table-striped">
                             <tbody>
                             }
                             <tr>
@@ -163,7 +163,7 @@ const WalletsTxInfoRender = function(txInfo) {
                       { this.state.activeTab === 2 &&
                         <div className="tab-pane active">
                           <textarea
-                            className="full-width height-400 raw"
+                            className="full-width height-400"
                             rows="20"
                             cols="80"
                             defaultValue={ this.state.rawTxDetails.hex }
@@ -173,7 +173,7 @@ const WalletsTxInfoRender = function(txInfo) {
                       { this.state.activeTab === 3 &&
                         <div className="tab-pane active">
                           <textarea
-                            className="full-width height-400 raw"
+                            className="full-width height-400"
                             rows="40"
                             cols="80"
                             defaultValue={ JSON.stringify(this.state.rawTxDetails, null, '\t') }

@@ -47,6 +47,11 @@ export const JumblrRender = function() {
 
           <div className="col-xs-12">
             <div className="alert alert-info alert-dismissible">
+              <button
+                type="button"
+                className="close">
+                <span>×</span>
+              </button>
               <span className="jumblr-header">
                 <i className="icon fa-paw"></i> { translate('JUMBLR.ABOUT') }
               </span>
@@ -177,7 +182,7 @@ export const JumblrRender = function() {
                       onClick={ () => this.openTab(1) }>
                       { translate('INDEX.NEXT') }
                     </button>
-                    <h5 className="safe-title">{ translate('JUMBLR.HOW_TO_USE') }</h5>
+                    <h5>{ translate('JUMBLR.HOW_TO_USE') }</h5>
                     <ul>
                       <li>{ translate('JUMBLR.CREATE_DEPOSIT_ADDRESS') }</li>
                       <li>{ translate('JUMBLR.CREATE_SECRET_ADDRESS') }</li>
@@ -196,7 +201,7 @@ export const JumblrRender = function() {
                       type="button"
                       className="btn btn-success waves-effect waves-light btn-next"
                       onClick={ () => this.openTab(2) }>{ translate('INDEX.NEXT') }</button>
-                    <h5 className="safe-title">{ translate('JUMBLR.FEW_SECURITY_NOTES') }</h5>
+                    <h5>{ translate('JUMBLR.FEW_SECURITY_NOTES') }</h5>
                     <div className="col-xs-12 nofloat">
                       <ul className="padding-bottom-20">
                         <li>{ translate('JUMBLR.FEW_SECURITY_NOTES_DESC1') }</li>

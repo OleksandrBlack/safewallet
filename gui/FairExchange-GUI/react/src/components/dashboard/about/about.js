@@ -28,8 +28,8 @@ class About extends React.Component {
   render() {
     return (
       <div className="page margin-left-0">
-        <div className="page-content safe-title">
-          <h2 className="safe-title">{ translate('ABOUT.ABOUT_SAFEWALLET') }</h2>
+        <div className="page-content">
+          <h2>{ translate('ABOUT.ABOUT_SAFEWALLET') }</h2>
           <p>{ translate('ABOUT.SAFEWALLET_MODES') }</p>
           <ul>
             <li>

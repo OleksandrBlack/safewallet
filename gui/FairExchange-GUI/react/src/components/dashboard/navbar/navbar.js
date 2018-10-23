@@ -166,8 +166,6 @@ const mapStateToProps = (state) => {
       isLoggedIn: state.Main.isLoggedIn,
       coins: state.Main.coins,
     },
-    SafeTrade: state.SafeTrade,
-    SafeVote: state.SafeVote,
   };
 };
 

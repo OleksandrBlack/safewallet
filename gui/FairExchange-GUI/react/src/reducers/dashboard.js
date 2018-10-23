@@ -9,7 +9,6 @@ import {
   ELECTRUM_SERVER_CHANGED,
   DISPLAY_ZCASH_PARAMS_FETCH,
   PRICES,
-  BTC_USD_RATE,
 } from '../actions/storeType';
 
 export function Dashboard(state = {
@@ -23,7 +22,6 @@ export function Dashboard(state = {
   eletrumServerChanged: false,
   displayZcparamsModal: false,
   prices: null,
-  btcUsdRate: null,
 }, action) {
   switch (action.type) {
     case DASHBOARD_ELECTRUM_COINS:
@@ -80,11 +78,6 @@ export function Dashboard(state = {
         ...state,
         prices: action.prices,
       };
-    case BTC_USD_RATE:
-      return {
-        ...state,
-        btcUsdRate: action.btcUsdRate,
-      }
     default:
       return state;
   }
