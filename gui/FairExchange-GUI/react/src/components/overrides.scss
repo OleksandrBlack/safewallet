@@ -6,10 +6,6 @@
   }
 }
 
-.page-main {
-  background: #f3f4f5;
-}
-
 #safe_header_button {
   button {
     margin-right: 5px;
@@ -17,6 +13,8 @@
 }
 
 .widget {
+  box-shadow: inset 1px 1px 10px #ccc;
+  background:  #2b3441;
   &.active {
     .bg-white {
       box-shadow: inset 1px 1px 10px #ccc;
@@ -26,6 +24,7 @@
 
 body {
   padding-top: 44px;
+  background-color: #2b3441;
 }
 
 #section-dashboard {
@@ -79,6 +78,7 @@ body {
   .wallet-widgets-list {
     overflow-y: auto;
     height: 100%;
+    background-color: #2b3441;
   }
 }
 
@@ -156,8 +156,12 @@ select{
   margin-left: 10px;
 }
 
+.page {
+  background:  #2b3441;
+}
+
 .backround-gray {
-  background: #f3f4f5;
+  background:  #2b3441;
 }
 
 .table-striped {
@@ -180,6 +184,8 @@ select{
 .alert-warning {
   width: 97.1%;
   margin: 0 auto;
+  background-color: #ffffff;
+  color: #2b3441;
 }
 
 .page-content-native {
@@ -260,7 +266,8 @@ select{
 
 #section-iguana-wallet-settings {
   > .row {
-    background: #f3f4f5;
+    background: #2b3441;
+    color: #ffffff;
   }
 }
 
@@ -376,4 +383,44 @@ select{
 .page-aside {
   position: fixed;
   z-index: 99;
+  background-color: #2b3441;
+}
+
+.navbar-default .navbar-toolbar>li>a {
+  color: #ffffff;
+}
+
+.panel {
+  background-color: #2b3441;
+  color: #ffffff;
+  box-shadow: inset 1px 1px 10px #ccc;
+}
+
+.safe-title {
+  color: #ffffff;
+}
+
+code {
+  background-color: #ffffff;
+  color: #2b3441;
+}
+
+.markets-filter select {
+  margin: 0 auto;
+}
+
+.white-font {
+  color: #ffffff;
+}
+
+table.white-font>tfoot>tr>th, .table.white-font>thead>tr>th {
+  color: #ffffff;
+}
+
+table.white-font>tbody>tr>td {
+  text-align: left;
+}
+
+textarea.raw {
+  background-color: #2b3441;
 }

@@ -109,7 +109,8 @@
 }
 
 #section-iguana-wallet-settings {
-  background: #f3f4f5;
+  background: #2b3441;
+  color: #ffffff;
   height: 100%;
 
   .panel-title {
@@ -135,7 +136,12 @@
     right: -3px;
     font-size: 20px;
     color: rgb(255, 75, 0);
-  }
+  }   
+}
+
+input.grey-font,
+select.grey-font {
+  color: #2b3441;
 }
 
 @keyframes max-height {
@@ -175,6 +181,7 @@
 .settings-coind-stdout-textarea {
   border: none;
   background-image: none !important;
+  color: #ffffff;
 }
 
 .app-update-progress {

@@ -58,7 +58,7 @@ export const WalletsNavWithWalletRender = function() {
                 type="button"
                 className="btn btn-primary waves-effect waves-light"
                 onClick={ () => this.toggleSendCoinForm(!this.props.ActiveCoin.send) }
-                disabled={ this.checkTotalBalance() <= 0 }>
+                /*disabled={ this.checkTotalBalance() <= 0 }*/>
                 <i className="icon fa-send"></i> { translate('INDEX.SEND') }
               </button>
             }

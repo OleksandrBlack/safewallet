@@ -28,7 +28,7 @@ if (osPlatform === 'linux') {
 
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = true;
 
-// GUI APP settings and starting gui on address http://120.0.0.1:17777
+// GUI APP settings and starting gui on address http://120.0.0.1:18777
 let shepherd = require('./routes/shepherd');
 let guiapp = express();
 
@@ -234,7 +234,7 @@ function createWindow(status, hideLoadingWindow) {
 					shepherd.log(`guiapp and sockets.io are listening on port ${appConfig.safewalletPort}`);
 					shepherd.writeLog(`guiapp and sockets.io are listening on port ${appConfig.safewalletPort}`);
 					// start sockets.io
-					io.set('origins', appConfig.dev ? 'http://127.0.0.1:3000' : null); // set origin
+					io.set('origins', appConfig.dev ? 'http://127.0.0.1:3000' : `http://127.0.0.1:${appConfig.safewalletPort}`);
 				});
 
 				// initialise window

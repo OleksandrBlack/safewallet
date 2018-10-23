@@ -97,7 +97,7 @@ class PanelSection extends React.Component {
         <div
           onClick={ () => this.toggleSection() }
           className="panel-heading">
-          <a className="panel-title">
+          <a className="panel-title safe-title">
             <i className={ icon }></i> { title }
           </a>
         </div>

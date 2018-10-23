@@ -1,7 +1,7 @@
 {
   "name": "SafewalletGUI",
   "version": "0.0.26",
-  "description": "Safewallet Wallet GUI",
+  "description": "Safewallet GUI",
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dashboard -t 'SafewalletGUI' -- webpack-dev-server --colors --no-info",
@@ -55,7 +55,10 @@
     "redux-thunk": "^2.2.0",
     "socket.io-react": "^1.1.2",
     "url-loader": "^0.5.7",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "react-copy-to-clipboard": "5.0.1",
+    "react-countdown-now": "1.3.0",
+    "cors-anywhere": "0.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",

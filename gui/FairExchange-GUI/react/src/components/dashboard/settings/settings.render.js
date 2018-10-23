@@ -58,7 +58,7 @@ export const SettingsRender = function() {
       className="padding-30">
         <div className="row">
           <div className="col-sm-12">
-            <h4 className="font-size-14 text-uppercase">{ translate('INDEX.WALLET_SETTINGS') }</h4>
+            <h4 className="font-size-14 text-uppercase safe-title">{ translate('INDEX.WALLET_SETTINGS') }</h4>
             <Panel
               uniqId={ 'SettingsAccordion' }
               singleOpen={ true }>

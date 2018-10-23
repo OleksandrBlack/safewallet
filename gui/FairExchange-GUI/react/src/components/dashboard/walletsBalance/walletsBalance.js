@@ -88,13 +88,7 @@ class WalletsBalance extends React.Component {
             this.props.ActiveCoin.balance &&
             this.props.ActiveCoin.balance.total) {
           _balance = this.props.ActiveCoin.balance.total;
-        }
-
-        if (type === 'interest' &&
-            this.props.ActiveCoin.balance &&
-            this.props.ActiveCoin.balance.interest) {
-          _balance = this.props.ActiveCoin.balance.interest;
-        }
+        }        
 
         if (type === 'transparent' &&
             this.props.ActiveCoin.balance &&
@@ -104,9 +98,46 @@ class WalletsBalance extends React.Component {
       } else {
         _balance = this.props.ActiveCoin.balance.balance;
       }
+    }    
+    
+    if (this.props.ActiveCoin.coin === 'SAFE' && this.props.SafeTrade && this.props.SafeTrade.tickers && 
+     this.props.SafeTrade.tickers['safebtc'] && this.props.Dashboard.btcUsdRate){
+      let _btcTotal = 0;
+      let _btcRatePerCoin = 0;     
+      const _safeBtcRates = this.props.SafeTrade.tickers['safebtc'].ticker;   
+      if (_safeBtcRates.buy){
+        _btcRatePerCoin = _safeBtcRates.buy;
+        _btcTotal = _balance * _safeBtcRates.buy;           
+      }
+      
+      let _usdTotal = 0;
+      let _usdRatePerCoin = 0;
+      const _btcUsdRate = this.props.Dashboard.btcUsdRate;
+      _usdRatePerCoin = _btcRatePerCoin * _btcUsdRate;
+      _usdTotal = _btcTotal * _btcUsdRate;      
+      return (
+        <div>
+          <div className="text-right">{ _balance }</div>                                   
+          <div
+            data-tip data-for={ `BTC${type}` }
+            className="text-right"><i className="icon fa-btc" /> { _btcTotal.toFixed(8) }</div>
+            <ReactTooltip id={ `BTC${type}` }>{ `Price per 1 ${this.props.ActiveCoin.coin} ~ ${_btcRatePerCoin} BTC` } </ReactTooltip> 
+          <div
+            data-tip data-for={ `USD${type}` }
+            className="text-right"><i className="icon fa-usd" /> { _usdTotal.toFixed(2) }</div>
+            <ReactTooltip id={ `USD${type}` }>{ `Price per 1 ${this.props.ActiveCoin.coin} ~ ${_usdRatePerCoin.toFixed(4)} USD` }</ReactTooltip>                  
+        </div>
+      );     
     }
+    
+    if (Config.roundValues) {
+      return formatValue(_balance);
+    } else {
+      return Number(_balance);
+    }  
+} 
 
-    if (mainWindow.appConfig.fiatRates &&
+   /* if (mainWindow.appConfig.fiatRates &&
         this.props.Dashboard.prices &&
         returnFiatPrice) {
       const _prices = this.props.Dashboard.prices;
@@ -127,9 +158,11 @@ class WalletsBalance extends React.Component {
           _fiatPriceTotal = _balance * _prices.fiat.USD * _prices[`${this.props.ActiveCoin.coin}/SAFE`].low;
           _fiatPricePerCoin = _prices.fiat.USD * _prices[`${this.props.ActiveCoin.coin}/SAFE`].low;
         }
-      }
+      }*/
 
-      return (
+   
+
+      /*return (
         <div>
           <div className="text-right">{ _balance }</div>
           { _fiatPriceTotal > 0 &&
@@ -139,16 +172,13 @@ class WalletsBalance extends React.Component {
               className="text-right">${ formatValue(_fiatPriceTotal) }</div>
           }
         </div>
-      );
-    } else {
-      if (Config.roundValues) {
-        return formatValue(_balance);
-      } else {
-        return Number(_balance);
-      }
-    }
-  }
+      );         *////
+   
+  
 
+  
+    
+    
   isActiveCoinMode(coinMode) {
     return this.props.ActiveCoin.mode === coinMode;
   }
@@ -192,6 +222,7 @@ const mapStateToProps = (state) => {
       progress: state.ActiveCoin.progress,
     },
     Dashboard: state.Dashboard,
+    SafeTrade: state.SafeTrade,
   };
 };
 

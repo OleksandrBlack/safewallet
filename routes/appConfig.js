@@ -2,7 +2,6 @@ const appConfig = {
   config: { // default config
     host: '127.0.0.1',
       safewalletPort: 18777,
-      safewalletPort: 17777,
       experimentalFeatures: false,
       dev: false,
     maxDescriptors: {
@@ -26,7 +25,7 @@ const appConfig = {
   },
   schema: {
     host: {
-      display: true,
+      display: false,
       type: 'string',
       displayName: 'Hostname',
       info: 'Application hostname',
@@ -127,7 +126,7 @@ const appConfig = {
       type: 'boolean',
     },
     fiatRates: {
-      display: true,
+      display: false,
       displayName: 'Fetch fiat rates',
       info: 'Get coin fiat rates from atomicexplorer.com',
       type: 'boolean',

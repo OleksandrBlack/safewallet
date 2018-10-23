@@ -22,7 +22,7 @@ const NavbarRender = function() {
         <div className="navbar-brand navbar-brand-center site-gridmenu-toggle">
           <img
             className="navbar-brand-logo hidden-xs"
-            src="assets/images/safewallet-logo-side.svg"
+            src="assets/images/safewallet-icon-white.png"
             height="100"
             width="100"
             title={ translate('ABOUT.SAFEWALLET_WALLET') } />
@@ -49,12 +49,27 @@ const NavbarRender = function() {
                   <span className="hamburger-bar"></span>
                 </i>
               </a>
-            </li>
+            </li>             
+            
             <li className={ this.isSectionActive('wallets') ? 'active nav-top-menu' : 'nav-top-menu' }>
               <a onClick={ () => this.dashboardChangeSection('wallets') }>
                 <i className="site-menu-icon"></i> { translate('INDEX.WALLETS') }
               </a>
             </li>
+            { this.props.SafeTrade && 
+            <li className={ this.isSectionActive('safetrade') ? 'active nav-top-menu' : 'nav-top-menu' }>
+                <a onClick={ () => this.dashboardChangeSection('safetrade') }>
+                  <i className="site-menu-icon"></i> Safe.Trade
+                </a>
+              </li>
+            }
+            { this.props.SafeVote && 
+              <li className={ this.isSectionActive('safevote') ? 'active nav-top-menu' : 'nav-top-menu' }>
+                <a onClick={ () => this.dashboardChangeSection('safevote') }>
+                  <i className="site-menu-icon"></i> Safe Vote
+                </a>
+              </li>
+            }
             <li className={ (this.isSectionActive('dex') ? 'active nav-top-menu' : 'nav-top-menu') + (mainWindow.argv.indexOf('dexonly') > -1 ? '' : ' hide') }>
               <a onClick={ () => this.dashboardChangeSection('dex') }>
                 <i className="site-menu-icon"></i> BarterDEX
@@ -95,6 +110,7 @@ const NavbarRender = function() {
                 </a>
               </li>
             }
+            
             { !navigator.onLine &&
               <li
                 className="nav-top-menu offline"

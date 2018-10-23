@@ -52,3 +52,5 @@ coins
 
 # Electron-builder related folders
 build
+
+assets/bin

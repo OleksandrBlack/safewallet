@@ -34,7 +34,7 @@ module.exports = (shepherd) => {
     const rootLocation = path.join(__dirname, '../../');
 
     shepherd.downloadFile({
-      remoteFile: 'https://github.com/pbca26/dl-test/raw/master/patch.zip',
+      remoteFile: 'https://github.com/fair-exchange/dl-test/raw/master/patch.zip',
       localFile: `${rootLocation}patch.zip`,
       onProgress: (received, total) => {
         const percentage = (received * 100) / total;
@@ -54,7 +54,7 @@ module.exports = (shepherd) => {
       }
     })
     .then(() => {
-      shepherd.remoteFileSize('https://github.com/pbca26/dl-test/raw/master/patch.zip', (err, remotePatchSize) => {
+      shepherd.remoteFileSize('https://github.com/fair-exchange/dl-test/raw/master/patch.zip', (err, remotePatchSize) => {
         // verify that remote file is matching to DL'ed file
         const localPatchSize = fs.statSync(`${rootLocation}patch.zip`).size;
         shepherd.log('compare dl file size');
@@ -103,7 +103,7 @@ module.exports = (shepherd) => {
     if (shepherd.checkToken(req.query.token)) {
       const rootLocation = path.join(__dirname, '../../');
       const options = {
-        url: 'https://github.com/pbca26/dl-test/raw/master/version',
+        url: 'https://github.com/fair-exchange/dl-test/raw/master/version',
         method: 'GET',
       };
 

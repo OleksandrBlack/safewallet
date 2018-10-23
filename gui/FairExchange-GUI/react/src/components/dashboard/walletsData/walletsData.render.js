@@ -238,41 +238,7 @@ export const TxHistoryListRender = function() {
 export const WalletsDataRender = function() {
   return (
     <span>
-      <div id="edexcoin_dashboardinfo">
-        { (this.displayClaimInterestUI() === 777 || this.displayClaimInterestUI() === -777) &&
-          <div className="col-xs-12 margin-top-20 backround-gray">
-            <div className="panel no-margin">
-              <div>
-                <div className="col-xlg-12 col-lg-12 col-sm-12 col-xs-12">
-                  <div className="panel no-margin padding-top-10 padding-bottom-10 center">
-                    { this.displayClaimInterestUI() === 777 &&
-                      <div>
-                        { translate('DASHBOARD.CLAIM_INTEREST_HELPER_BAR_P1') } <strong>{ this.props.ActiveCoin.balance.interest }</strong> SAFE { translate('DASHBOARD.CLAIM_INTEREST_HELPER_BAR_P2') }.
-                        <button
-                          type="button"
-                          className="btn btn-success waves-effect waves-light dashboard-claim-interest-btn"
-                          onClick={ this.openClaimInterestModal }>
-                          <i className="icon fa-dollar"></i> { translate('DASHBOARD.CLAIM_INTEREST_HELPER_BAR_P3') }
-                        </button>
-                      </div>
-                    }
-                    { this.displayClaimInterestUI() === -777 &&
-                      <div>
-                        { translate('DASHBOARD.CLAIM_INTEREST_HELPER_BAR_ALT_P1') }.
-                        <button
-                          type="button"
-                          className="btn btn-success waves-effect waves-light dashboard-claim-interest-btn"
-                          onClick={ this.openClaimInterestModal }>
-                          <i className="icon fa-search"></i> { translate('DASHBOARD.CLAIM_INTEREST_HELPER_BAR_ALT_P2') }
-                        </button>
-                      </div>
-                    }
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        }
+      <div id="edexcoin_dashboardinfo">        
         <div className="col-xs-12 margin-top-20 backround-gray">
           <div className="panel nav-tabs-horizontal">
             <div>
@@ -289,7 +255,7 @@ export const WalletsDataRender = function() {
                         className="icon fa-refresh manual-txhistory-refresh pointer"
                         onClick={ this.refreshTxHistory }></i>
                     }
-                    <h4 className="panel-title">{ translate('INDEX.TRANSACTION_HISTORY') }</h4>
+                    <h4 className="panel-title safe-title">{ translate('INDEX.TRANSACTION_HISTORY') }</h4>
                   </header>
                   <div className="panel-body">
                     <div className="row padding-bottom-30 padding-top-10">

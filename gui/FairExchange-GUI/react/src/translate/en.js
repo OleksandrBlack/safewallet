@@ -56,14 +56,14 @@ export const LANG_EN = {
     'NATIVE_INTEREST_CHANGE_DESC': 'It\'s likely that interest is going to be credited as a separate transaction to a newely created SAFE address. This is how native implements interest claiming.',
   },
   'ABOUT': {
-    'SAFEWALLET_WALLET': 'Safewallet Wallet',
+    'SAFEWALLET_WALLET': 'Safewallet',
     'ABOUT_SAFEWALLET': 'About Safewallet',
-    'SAFEWALLET_MODES': 'Safewallet Wallet is a desktop app that you can use to manage multiple cryptocurrency wallets. ' +
+    'SAFEWALLET_MODES': 'Safewallet is a desktop app that you can use to manage multiple cryptocurrency wallets. ' +
                    'When you set up a wallet, you can configure it to operate in one of the following modes:',
     'NATIVE_MODE_DESC': 'Only available for a few currencies. Like \'Full Mode\' but provides advanced functionality.',
     'SAFEWALLET_CAPABILITIES': 'Safewallet includes the following capabilities:',
     'BARTER_DEX_DESC': 'Easily exchange cryptocurrencies via a shapeshift-like service.',
-    'SAFEWALLET_NOTE': 'Note: Safewallet Wallet is still in development. ' +
+    'SAFEWALLET_NOTE': 'Note: Safewallet is still in development. ' +
                   'It is safe to use, but you should make proper backups. ' +
                   'We do not recommend using it as the primarily wallet for your cryptocurrencies.',
     'TESTERS': 'Testers',
@@ -182,7 +182,7 @@ export const LANG_EN = {
     'NEXT': 'Next',
     'ENTRIES_SM': 'entries',
     'SYNC_ERR_BLOCKS': 'Connecting to peers...',
-    'SELECT_A_COIN': 'Select Coin to add to Safewallet Wallet',
+    'SELECT_A_COIN': 'Select Coin to add to Safewallet',
     'WALLETS': 'Wallets',
     'ACTIVATE_COIN': 'Activate Coin',
     'WELCOME_PLEASE_ADD': 'Welcome. Please choose SAFE to begin.',

@@ -510,29 +510,7 @@ export function getModeInfo(mode) {
 
 export function coindList() {
   const _coins = [
-    'SAFE',
-    'CHIPS',
-    'BET',
-    'BOTS',
-    'CEAL',
-    'COQUI',
-    'CRYPTO',
-    'HODL',
-    'DEX',
-    'JUMBLR',
-    'KV',
-    'MGW',
-    'MVP',
-    'MNZ',
-    'PANGEA',
-    'REVS',
-    'MSHARK',
-    'MESH',
-    'SUPERNET',
-    'WLC',
-    'AXO',
-    'ETOMIC',
-    'BTCH'
+    'SAFE'
   ];
 
   return _coins;

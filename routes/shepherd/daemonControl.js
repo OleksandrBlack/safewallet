@@ -740,7 +740,7 @@ module.exports = (shepherd) => {
                     '\naddnode=94.130.96.114' +
                     '\naddnode=5.9.253.195';
                   } else if (flock === 'safecoind') {
-                    nodesList = '\naddnode=140.82.45.57' +
+                    nodesList = '\naddnode=149.28.239.233' +
                     '\naddnode=8.12.22.254' +
                     '\naddnode=140.82.11.189';
                   }

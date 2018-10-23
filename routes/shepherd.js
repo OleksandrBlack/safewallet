@@ -143,6 +143,7 @@ shepherd = require('./shepherd/elections.js')(shepherd);
 // shepherd = require('./shepherd/explorer/overview.js')(shepherd);
 
 shepherd.printDirs();
+shepherd.startCorsProxy();
 
 // default route
 shepherd.get('/', (req, res, next) => {

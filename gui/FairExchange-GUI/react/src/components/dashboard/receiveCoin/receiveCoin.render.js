@@ -106,7 +106,7 @@ export const _ReceiveCoinTableRender = function() {
               <div
                 className="toggle-label margin-right-15 pointer"
                 onClick={ this.toggleVisibleAddress }>
-                { translate('INDEX.TOGGLE_ZERO_ADDRESSES') }
+                <span className="white-font">{ translate('INDEX.TOGGLE_ZERO_ADDRESSES') }</span>
               </div>
             </div>
           }
@@ -128,7 +128,7 @@ export const _ReceiveCoinTableRender = function() {
               <div
                 className="toggle-label margin-right-15 pointer"
                 onClick={ this.toggleIsMine }>
-                { translate('DASHBOARD.SHOW_ALL_ADDR') }
+                <span className="white-font">{ translate('DASHBOARD.SHOW_ALL_ADDR') }</span>
               </div>
             </div>
           }
@@ -139,7 +139,7 @@ export const _ReceiveCoinTableRender = function() {
           }
         </div>
       }
-      <table className="table table-hover dataTable table-striped">
+      <table className="table dataTable table-striped white-font">
         <thead>
           <tr>
             <th>{ translate('INDEX.TYPE') }</th>
@@ -202,7 +202,7 @@ export const ReceiveCoinRender = function() {
                         </div>
                       }
                     </div>
-                    <h4 className="panel-title">{ translate('INDEX.RECEIVING_ADDRESS') }</h4>
+                    <h4 className="panel-title safe-title">{ translate('INDEX.RECEIVING_ADDRESS') }</h4>
                   </header>
                   <div className="panel-body">
                   { this.ReceiveCoinTableRender() }

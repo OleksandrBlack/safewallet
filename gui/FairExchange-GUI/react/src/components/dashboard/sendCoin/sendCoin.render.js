@@ -202,7 +202,7 @@ export const SendRender = function() {
         <div className={ 'col-xlg-12 col-md-12 col-sm-12 col-xs-12' + (this.state.currentStep === 0 ? '' : ' hide') }>
           <div className="panel">
             <div className="panel-heading">
-              <h3 className="panel-title">
+              <h3 className="panel-title safe-title">
                 { translate('INDEX.SEND') } { this.props.ActiveCoin.coin }
               </h3>
             </div>
@@ -229,7 +229,7 @@ export const SendRender = function() {
                   { this.state.amount } { this.props.ActiveCoin.coin }
                 </div>
                 <div className={ this.state.subtractFee ? 'col-lg-6 col-sm-6 col-xs-12 padding-top-10 bold' : 'hide' }>
-                  { translate('DASHBOARD.SUBTRACT_FEE') }
+                  <div className="white-font">{ translate('DASHBOARD.SUBTRACT_FEE') }</div>
                 </div>
               </div>
 
@@ -312,13 +312,13 @@ export const SendRender = function() {
         <div className={ 'col-xlg-12 col-md-12 col-sm-12 col-xs-12' + (this.state.currentStep === 2 ? '' : ' hide') }>
           <div className="panel">
             <div className="panel-heading">
-              <h4 className="panel-title">
+              <h4 className="panel-title safe-title">
                 { translate('INDEX.TRANSACTION_RESULT') }
               </h4>
               <div>
                 { this.state.lastSendToResponse &&
                   !this.state.lastSendToResponse.msg &&
-                  <table className="table table-hover table-striped">
+                  <table className="table table-striped white-font">
                     <thead>
                       <tr>
                         <th className="padding-left-30">{ translate('INDEX.KEY') }</th>

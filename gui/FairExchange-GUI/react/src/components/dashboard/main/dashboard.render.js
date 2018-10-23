@@ -20,12 +20,15 @@ import CoindDownModal from '../coindDownModal/coindDownModal';
 import ImportKeyModal from '../importKeyModal/importKeyModal';
 import ZcparamsFetchModal from '../zcparamsFetchModal/zcparamsFetchModal';
 import ClaimInterestModal from '../claimInterestModal/claimInterestModal';
+import SafeTrade from '../safeTrade/safeTrade';
+import PairTile from '../pairTile/pairTile';
+import SafeVote from '../safeVote/safeVote';
 
 const DashboardRender = function() {
   return (
     <div className="full-height">
       <div
-        className={ this.isSectionActive('wallets') ? 'page-main' : '' }
+        className={ this.isSectionActive('wallets') || this.isSectionActive('safetrade') ? 'page-main' : '' }
         id="section-dashboard">
         <Navbar />
         <CoindDownModal />
@@ -34,14 +37,24 @@ const DashboardRender = function() {
         }
         { this.props.Dashboard.displayZcparamsModal &&
           <ZcparamsFetchModal />
-        }
-        <div className={ this.isSectionActive('wallets') ? 'show' : 'hide' }>
+        }        
+        <div className={ this.isSectionActive('wallets') ? 'show' : 'hide' }>        
           <CoinTile />
           <WalletsNav />
           <WalletsTxInfo />
           <WalletsMain />
-          <ClaimInterestModal />
         </div>
+        { this.props.SafeTrade &&
+          <div className={ this.isSectionActive('safetrade') ? 'show' : 'hide' }> 
+            <PairTile />         
+            <SafeTrade />
+          </div>
+        }
+        { this.props.SafeVote &&
+          <div className={ this.isSectionActive('safevote') ? 'show' : 'hide' }>
+            <SafeVote />
+          </div>
+        }
         { this.isSectionActive('edex') &&
           <EDEX />
         }
@@ -60,6 +73,7 @@ const DashboardRender = function() {
         { this.isSectionActive('tools') &&
           <Tools />
         }
+        
       </div>
     </div>
   );
