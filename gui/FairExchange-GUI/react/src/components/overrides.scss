@@ -157,7 +157,7 @@ select{
 }
 
 .page {
-  background:  #2b3441;
+  background:  #014d67;
 }
 
 .backround-gray {
@@ -423,4 +423,9 @@ table.white-font>tbody>tr>td {
 
 textarea.raw {
   background-color: #2b3441;
+}
+
+.list-group .list-group-item,
+.list-group .list-group-item:hover {
+  background-color: rgba(7, 161, 212, 0.3);
 }

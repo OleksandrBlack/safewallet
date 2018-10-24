@@ -112,7 +112,7 @@
 
 .list-group .card-block:hover {
   cursor: pointer;
-  background-color: rgba(7, 161, 212, 0.3);
+  background-color: #eee;
 }
 
 .list-group .list-group-item,
