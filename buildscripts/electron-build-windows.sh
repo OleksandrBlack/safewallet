@@ -30,7 +30,7 @@ electron-packager . --platform=win32 \
   --version-string.ProductName="Safewallet" \
   --version-string.InternalName="Safewallet" \
   --app-copyright="Copyright (C) 2018 SafeCoin. All rights reserved." \
-  --asar
+  
   
 echo
 echo "Сreate archive SafeWallet-win32-ia32.tar.bz2"
@@ -57,7 +57,7 @@ electron-packager . --platform=win32 \
   --version-string.ProductName="Safewallet" \
   --version-string.InternalName="Safewallet" \
   --app-copyright="Copyright (C) 2018 SafeCoin. All rights reserved." \
-  --asar
+  
  
 echo
 echo "Сreate archive SafeWallet-win32-x64.tar.bz2"
