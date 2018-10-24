@@ -492,16 +492,16 @@ fieldset[disabled] .form-control {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #757575;
+  color: #fff;
 }
 .btn-default {
-  color: #757575;
-  background-color: rgba(7,161,212,.3);
+  color: #fff;
+  background-color: #00bcfb;
   border-color: #eee;
 }
 .btn-default:focus,
 .btn-default.focus {
-  color: #757575;
+  color: #fff;
   background-color: #d5d5d5;
   border-color: #aeaeae;
 }
