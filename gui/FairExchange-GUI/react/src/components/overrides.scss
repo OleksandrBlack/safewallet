@@ -14,17 +14,17 @@
 
 .widget {
   box-shadow: inset 1px 1px 10px #ccc;
-  background:  #2b3441;
+  background:  #014d67;
   &.active {
     .bg-white {
-      box-shadow: inset 1px 1px 10px #ccc;
+      box-shadow: inset 1px 1px 10px #07a1d4;
     }
   }
 }
 
 body {
   padding-top: 44px;
-  background-color: #2b3441;
+  background-color: #00698c;
 }
 
 #section-dashboard {
@@ -78,7 +78,7 @@ body {
   .wallet-widgets-list {
     overflow-y: auto;
     height: 100%;
-    background-color: #2b3441;
+    background-color: #00698c;
   }
 }
 
@@ -161,7 +161,7 @@ select{
 }
 
 .backround-gray {
-  background:  #2b3441;
+  background:  #00698c;
 }
 
 .table-striped {
@@ -383,7 +383,7 @@ select{
 .page-aside {
   position: fixed;
   z-index: 99;
-  background-color: #2b3441;
+  background-color: #00698c;
 }
 
 .navbar-default .navbar-toolbar>li>a {
@@ -391,9 +391,9 @@ select{
 }
 
 .panel {
-  background-color: #2b3441;
+  background-color: #014d67;
   color: #ffffff;
-  box-shadow: inset 1px 1px 10px #ccc;
+  box-shadow: inset 1px 1px 10px #07a1d4;
 }
 
 .safe-title {
