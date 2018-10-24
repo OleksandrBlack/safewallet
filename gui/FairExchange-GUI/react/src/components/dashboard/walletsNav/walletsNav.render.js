@@ -19,7 +19,7 @@ export const WalletsNavNoWalletRender = function() {
 
 export const WalletsNavWithWalletRender = function() {
   return (
-    <div>
+    <div className="white-font">
       <div
         className={ 'page-header page-header-bordered header-fairexchange padding-bottom-40 ' + (this.props.ActiveCoin.mode === 'spv' ? 'page-header--spv' : 'page-header--native') }
         id="header-dashboard"
