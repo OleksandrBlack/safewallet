@@ -386,6 +386,11 @@ select{
   background-color: #00698c;
 }
 
+.page-aside .list-group-item,
+.page-aside .list-group-item:hover {
+  background-color: rgba(7, 161, 212, 0.3);
+}
+
 .navbar-default .navbar-toolbar>li>a {
   color: #ffffff;
 }
@@ -423,9 +428,4 @@ table.white-font>tbody>tr>td {
 
 textarea.raw {
   background-color: #2b3441;
-}
-
-.list-group .list-group-item,
-.list-group .list-group-item:hover {
-  background-color: rgba(7, 161, 212, 0.3);
 }
