@@ -13,11 +13,11 @@
 }
 
 .widget {
-  box-shadow: inset 1px 1px 10px #07a1d4;
+  box-shadow: inset 0px 0px 1px 2px #00bcfb;
   background:  #014d67;
   &.active {
     .bg-white {
-      box-shadow: inset 1px 1px 10px #07a1d4;
+      box-shadow: inset 0px 0px 1px 2px #00bcfb;
     }
   }
 }
@@ -398,7 +398,7 @@ select{
 .panel {
   background-color: #014d67;
   color: #ffffff;
-  box-shadow: inset 1px 1px 10px #07a1d4;
+  box-shadow: inset 0px 0px 1px 2px #00bcfb;
 }
 
 .safe-title {
