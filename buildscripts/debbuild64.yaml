@@ -5,6 +5,9 @@ appId: org.safecoin.safewallet
 productName: SafeWallet
 linux:
   icon: assets/icons/icon.icns
+  category: Internet
+  vendor: safecoin.org
+  description: SafeCoin GUI Wallet
   target:
     - target: deb
       arch:
