@@ -42,7 +42,8 @@ let electrumServers = {
     serverList: [
       'local.support:40001',
       '45.63.13.60:40001',
-      'electrum.safc.cc:40001'
+      'electrum.zclassic.community:50001',
+      'zclele.duckdns.org:50001',
     ],
   },
   xsg: {
@@ -54,7 +55,8 @@ let electrumServers = {
     serverList: [
       'local.support:50001',
       '45.63.13.60:50001',
-      'electrum.safc.cc:50001'
+      'electrumsvr.snowgem.org:50001',
+      'electrumsvr2.snowgem.org:50001',
     ],
   },
 };
