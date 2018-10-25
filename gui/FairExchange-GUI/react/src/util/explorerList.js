@@ -2,7 +2,7 @@
 
 const explorerList = {
   SAFE: 'https://explorer.safecoin.org',
-  BTCZ: 'https://explorer.bitcoinz.site',
+  BTCZ: 'https://explorer.btcz.rocks',
   ANON: 'https://explorer.anon.zeltrez.io',
   ZCL: 'https://explorer.zcl.zeltrez.io',
   XSG: 'https://insight.snowgem.org',
