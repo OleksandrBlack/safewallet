@@ -8,7 +8,6 @@ linux:
   category: Internet
   vendor: safecoin.org
   description: SafeCoin GUI Wallet
-  asarUnpack: assets/bin/
   target:
     - target: tar.gz
       arch:

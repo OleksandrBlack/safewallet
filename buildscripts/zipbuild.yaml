@@ -5,7 +5,6 @@ appId: org.safecoin.safewallet
 productName: SafeWallet
 win:
   icon: assets/icons/icon.ico
-  asarUnpack: assets/bin/
   target:
     - target: zip
       arch:
