@@ -1328,7 +1328,7 @@ a.thumbnail.active {
   color: #00bcd4;
 }
 .alert-warning {
-  color: #00bcfb;
+  color: #014d67;
   background-color: rgba(255, 224, 178, 0.8);
   border-color: #ffe0b2;
 }
@@ -1339,11 +1339,11 @@ a.thumbnail.active {
   color: #cc7a00;
 }
 .alert-warning .close {
-  color: #00bcfb;
+  color: #014d67;
 }
 .alert-warning .close:hover,
 .alert-warning .close:focus {
-  color: #00bcfb;
+  color: #014d67;
 }
 .alert-danger {
   color: #f44336;
