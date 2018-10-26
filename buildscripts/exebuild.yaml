@@ -7,7 +7,7 @@ win:
   icon: assets/icons/icon.ico
   compression: maximum
   artifactName: ${productName}-x64-${version}.${ext}
-  asarUnpack: assets/bin/*
+  asarUnpack: assets/bin/
   target:
     - target: nsis
       arch:
