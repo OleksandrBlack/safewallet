@@ -20,7 +20,7 @@ pwd
 echo =========================================
 echo Step: Permission +x for OSX binaries from artifacts to assets/bin/osx/
 echo
-rm assets/artifacts.ipv6admin.com/latest/osx
+rm assets/artifacts.ipv6admin.com/latest/osx/iguana
 chmod +x assets/artifacts.ipv6admin.com/latest/osx/safecoin*
 
 mkdir assets/bin
@@ -40,13 +40,13 @@ fi
 echo =========================================
 echo Step: Moving Windows binaries from artifacts to assets/bin/win64/
 #echo
-rm assets/artifacts.ipv6admin.com/latest/windows
+rm assets/artifacts.ipv6admin.com/latest/windows/iguana
 mv assets/artifacts.ipv6admin.com/latest/windows assets/bin/win64
 echo
 echo =========================================
 echo Step: Permissions +x for linux64 binaries from artifacts to assets/bin/linux64
 echo
-rm assets/artifacts.ipv6admin.com/latest/linux
+rm assets/artifacts.ipv6admin.com/latest/linux/iguana
 chmod +x assets/artifacts.ipv6admin.com/latest/linux/safecoin*
 echo Moving Linux bins to assets/bin
 mv assets/artifacts.ipv6admin.com/latest/linux assets/bin/linux64/
