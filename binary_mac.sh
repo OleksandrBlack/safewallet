@@ -50,6 +50,7 @@ echo Step: Removing temp-dir binaries
 rm -rvf assets/bin/win64
 rm -rvf assets/bin/linux64
 rm -rvf assets/artifacts.ipv6admin.com
+rm -rvf libs_legacy_osx.zip
 rm -rvf libs_legacy_osx
 rm -rvf __MACOSX
 echo Step: Finished
