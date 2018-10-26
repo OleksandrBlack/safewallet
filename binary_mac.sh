@@ -4,6 +4,7 @@ echo Step: Removing old binaries
 pwd
 [ ! -d assets ] && \
   rm -rvf artifacts.tar.gz
+  rm -rvf libs_legacy_osx.zip
   mkdir -p assets
 cd assets
 [ -d artifacts.ipv6admin.com ] && \
@@ -49,4 +50,6 @@ echo Step: Removing temp-dir binaries
 rm -rvf assets/bin/win64
 rm -rvf assets/bin/linux64
 rm -rvf assets/artifacts.ipv6admin.com
+rm -rvf libs_legacy_osx
+rm -rvf __MACOSX
 echo Step: Finished
