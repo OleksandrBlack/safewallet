@@ -9,6 +9,7 @@ cd assets
 [ -d artifacts.ipv6admin.com ] && \
   echo Removing old artifacts. && \
   rm -rvf artifacts.ipv6admin.com
+  rm -rvf assets/bin/win64
 echo
 echo Step: Cloning latest binaries for build
 #wget --recursive --no-parent https://artifacts.ipv6admin.com/latest/
