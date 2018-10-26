@@ -3,10 +3,10 @@ directories:
   buildResources: build
 appId: org.safecoin.safewallet
 productName: SafeWallet_x86
+description: String - The application description.
 win:
   icon: assets/icons/icon.ico
   compression: maximum
-  description: String - The application description.
   target:
     - target: nsis
       arch:
