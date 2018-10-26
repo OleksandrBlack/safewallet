@@ -24,6 +24,7 @@ pwd
 echo =========================================
 echo Step: Moving Windows binaries from artifacts to assets/bin/win64/
 #echo
+mkdir assets/bin
 rm assets/artifacts.ipv6admin.com/latest/windows/iguana.exe
 mv assets/artifacts.ipv6admin.com/latest/windows assets/bin/win64
 echo
