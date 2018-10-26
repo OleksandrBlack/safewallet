@@ -6,11 +6,12 @@ productName: SafeWallet
 win:
   icon: assets/icons/icon.ico
   compression: maximum
-  artifactName: ${productName}-x86-${version}.${ext}
+  artifactName: ${productName}-x64-${version}.${ext}
+  asar: false
   target:
     - target: nsis
       arch:
-        - ia32
+        - x64
 nsis:
   oneClick: false
   perMachine: true
