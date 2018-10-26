@@ -130,7 +130,7 @@ body {
 select{
   &.form-control {
     &.form-material {
-      color: #757575;
+      color: #fff;
     }
   }
 }
@@ -295,7 +295,7 @@ select{
     border-radius: 50%;
   }
 
-  * { color: #757575 !important; }
+  * { color: #fff !important; }
 
   .Select-clear {
     display: none;
