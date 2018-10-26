@@ -18,7 +18,8 @@
 	"dist-win-exe32": "build -w --config=buildscripts/exebuild32.yaml && mkdir -p ~/wallets/ && cp dist/*.exe ~/wallets/ && rm -r dist/*",
 	"dist-win-exe64": "build -w --config=buildscripts/exebuild64.yaml && mkdir -p ~/wallets/ && cp dist/*.exe ~/wallets/ && rm -r dist/*",
 	"dist-win-zip32": "build -w --config=buildscripts/zipbuild32.yaml && mkdir -p ~/wallets/ && cp dist/*.zip ~/wallets/ && rm -r dist/*",
-	"dist-win-zip64": "build -w --config=buildscripts/zipbuild64.yaml && mkdir -p ~/wallets/ && cp dist/*.zip ~/wallets/ && rm -r dist/*"
+	"dist-win-zip64": "build -w --config=buildscripts/zipbuild64.yaml && mkdir -p ~/wallets/ && cp dist/*.zip ~/wallets/ && rm -r dist/*",
+	"dist-mac-dmg": "build -w --config=buildscripts/macbuild.yaml && mkdir -p ~/wallets/ && cp dist/*.dmg ~/wallets/ && rm -r dist/*"
 	
   },
   "repository": "https://github.com/fair-exchange/Safewallet/",

@@ -1,0 +1,10 @@
+directories:
+  output: dist
+  buildResources: build
+appId: org.safecoin.safewallet
+productName: SafeWallet
+mac:
+  category: public.app-category.internet
+  icon: assets/icons/icon.icns
+  target: dmg
+electronVersion: 2.0.8
