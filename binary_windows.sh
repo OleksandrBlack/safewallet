@@ -16,6 +16,7 @@ wget https://github.com/Fair-Exchange/bitcore-node-safecoin/releases/download/v0
 tar zxf artifacts.tar.gz
 echo
 rm -rvf artifacts.tar.gz
+rm -rvf bin
 echo
 cd ..
 echo =========================================
