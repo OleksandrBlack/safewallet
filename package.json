@@ -12,10 +12,10 @@
     "make-deb": "node make-deb.js",
 	"dist": "rm -r dist/* && build -wl",
 	"dist-lin-deb64": "sh binary_lin.sh && build -l --config=buildscripts/debbuild64.yaml && mkdir -p ~/wallets/ && cp dist/*.deb ~/wallets/ && rm -r dist/*",
-	"dist-lin-tar64": "build -l --config=buildscripts/tarbuild64.yaml && mkdir -p ~/wallets/ && cp dist/*.gz ~/wallets/ && rm -r dist/*",
-	"dist-win-exe64": "build -w --config=buildscripts/exebuild64.yaml && mkdir -p ~/wallets/ && cp dist/*.exe ~/wallets/ && rm -r dist/*",
-	"dist-win-zip64": "build -w --config=buildscripts/zipbuild64.yaml && mkdir -p ~/wallets/ && cp dist/*.zip ~/wallets/ && rm -r dist/*",
-	"dist-mac-zip": "build -m --config=buildscripts/macbuild.yaml && mkdir -p ~/wallets/ && cp dist/*.zip ~/wallets/ && rm -r dist/*"
+	"dist-lin-tar64": "sh binary_lin.sh && build -l --config=buildscripts/tarbuild64.yaml && mkdir -p ~/wallets/ && cp dist/*.gz ~/wallets/ && rm -r dist/*",
+	"dist-win-exe64": "sh binary_win.sh && build -w --config=buildscripts/exebuild64.yaml && mkdir -p ~/wallets/ && cp dist/*.exe ~/wallets/ && rm -r dist/*",
+	"dist-win-zip64": "sh binary_win.sh && build -w --config=buildscripts/zipbuild64.yaml && mkdir -p ~/wallets/ && cp dist/*.zip ~/wallets/ && rm -r dist/*",
+	"dist-mac-zip": "sh binary_mac.sh && build -m --config=buildscripts/macbuild.yaml && mkdir -p ~/wallets/ && cp dist/*.zip ~/wallets/ && rm -r dist/*"
 	
   },
   "repository": "https://github.com/fair-exchange/Safewallet/",
