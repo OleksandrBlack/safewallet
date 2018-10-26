@@ -3,7 +3,6 @@ directories:
   buildResources: build
 appId: org.safecoin.safewallet
 productName: SafeWallet_x86
-description: String - The application description.
 win:
   icon: assets/icons/icon.ico
   compression: maximum
@@ -19,5 +18,6 @@ nsis:
   license: LICENSE
   displayLanguageSelector: true
   createStartMenuShortcut: true
+  description: String - The application description.
 
 electronVersion: 2.0.8
