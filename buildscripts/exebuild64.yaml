@@ -2,9 +2,11 @@ directories:
   output: dist
   buildResources: build
 appId: org.safecoin.safewallet
-productName: SafeWallet_x64
+productName: SafeWallet
 win:
   icon: assets/icons/icon.ico
+  compression: maximum
+  artifactName: ${productName}-x64-${version}.${ext}
   target:
     - target: nsis
       arch:
