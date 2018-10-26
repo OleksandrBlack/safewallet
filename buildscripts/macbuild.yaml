@@ -4,5 +4,7 @@ directories:
 appId: org.safecoin.safewallet
 productName: SafeWallet
 mac:
+  category: public.app-category.internet
   icon: assets/icons/icon.icns
+  target: zip
 electronVersion: 2.0.8
