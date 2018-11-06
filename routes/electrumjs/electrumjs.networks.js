@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use strict'
 const bitcoin = require('bitcoinjs-lib');
 
@@ -5,6 +6,19 @@ let networks = exports;
 Object.keys(bitcoin.networks).forEach((key) => {
   networks[key] = bitcoin.networks[key];
 });
+=======
+let networks = require('agama-wallet-lib/src/bitcoinjs-networks');
+const {
+  zec,
+  vrsc,
+} = require('bitgo-utxo-lib/src/networks');
+
+networks.komodo = networks.kmd;
+networks.zec = zec;
+networks.zec.overwinter = true;
+networks.vrsc = vrsc;
+networks.vrsc.overwinter = true;
+>>>>>>> 4200173... spv zec, vrsc overwinter support; thanks to @miketout
 
 // https://github.com/Fair-Exchange/safecoin/blob/master/src/chainparams.cpp
 networks.safecoin = {

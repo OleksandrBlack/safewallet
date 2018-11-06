@@ -44,6 +44,7 @@
     "bitcoinforkjs-lib": "git://github.com/Fair-Exchange/bitcoinforkjs-lib.git",
     "bitcoinjs-lib": "git://github.com/Fair-Exchange/bitcoinjs-lib.git",
     "bitcoinjs-lib-pos": "git://github.com/Fair-Exchange/bitcoinjs-lib-pos",
+    "bitgo-utxo-lib": "git+https://github.com/Fair-Exchange/bitgo-utxo-lib.git",
     "bitcoinjs-lib-zcash": "git://github.com/pbca26/bitcoinjs-lib#zcash",
     "bluebird": "^3.4.7",
     "body-parser": "^1.15.2",
