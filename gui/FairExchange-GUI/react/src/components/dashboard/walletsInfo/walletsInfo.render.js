@@ -280,6 +280,12 @@ const WalletsInfoRender = function() {
                     </td>
                   </tr>
                   <tr>
+                    <td><b>{ translate('INDEX.CONNECTIONS_TLS') }</b></td>
+                    <td>
+                      <b>{ _progress.tls_connections }</b>
+                    </td>
+                  </tr>
+                  <tr>
                     <td>{ translate('INDEX.DIFFICULTY') }</td>
                     <td>
                       { _progress.difficulty }
