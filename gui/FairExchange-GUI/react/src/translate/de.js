@@ -259,6 +259,7 @@ export const LANG_DE = {
     'ACTIVATING_CHAIN': 'Beste Chain wird aktiviert',
     'SAFE_STARTED': 'Safecoin Daemon wurde gestartet und arbeitet.<br>Bitte warten Sie, bis die beste Chain aktiviert wurde.<br>Tipp: Falls die Synchronisierung hängt, versuchen Sie es mit einem Neustart der Wallet. ',
     'CONNECTIONS': 'Verbindungen',
+    'CONNECTIONS_TLS': 'TLS',
     'TRANSPARENT_BALANCE': 'Transparentes Guthaben',
     'Z_BALANCE': 'Privates (Z) Guthaben',
     'ZT_BALANCE': 'Guthaben gesamt (Z+T)',

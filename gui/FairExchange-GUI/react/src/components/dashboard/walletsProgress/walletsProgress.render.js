@@ -36,7 +36,11 @@ export const SyncPercentageRender = function(syncPercentage, currentBlock, maxHe
             { translate('INDEX.BLOCKS') }:&nbsp;
             { this.props.ActiveCoin.progress.blocks }&nbsp;|&nbsp;
             { translate('INDEX.CONNECTIONS') }:&nbsp;
-            { this.props.ActiveCoin.progress.connections }
+            { this.props.ActiveCoin.progress.connections }&nbsp;|&nbsp;
+			<b>
+            { translate('INDEX.CONNECTIONS_TLS') }:&nbsp;
+            { this.props.ActiveCoin.progress.tls_connections }
+			</b>
           </span>
         </div>
       );
@@ -56,6 +60,12 @@ export const SyncPercentageRender = function(syncPercentage, currentBlock, maxHe
             <span className={ this.props.ActiveCoin.progress.connections ? '' : 'hide' }>|&nbsp;
               { translate('INDEX.CONNECTIONS') }:&nbsp;
               { this.props.ActiveCoin.progress.connections }
+            </span>&nbsp;
+            <span className={ this.props.ActiveCoin.progress.tls_connections ? '' : 'hide' }>|&nbsp;
+			<b>
+              { translate('INDEX.CONNECTIONS_TLS') }:&nbsp;
+              { this.props.ActiveCoin.progress.tls_connections }
+			</b>
             </span>
           </span>
         </div>

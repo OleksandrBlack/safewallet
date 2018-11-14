@@ -272,6 +272,7 @@ export const LANG_EN = {
                    'Please wait while the best chain is being activated.<br>' +
                    'Tip: in case sync is stuck restart the wallet.',
     'CONNECTIONS': 'Connections',
+	'CONNECTIONS_TLS': 'TLS',
     'TRANSPARENT_BALANCE': 'Transparent Balance',
     'Z_BALANCE': 'Private (Z) Balance',
     'INTEREST_EARNED': 'Interest Earned',
