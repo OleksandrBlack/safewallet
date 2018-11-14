@@ -53,8 +53,8 @@ sudo apt-get install wine1.8
 #### **Alternative build SafeWallet through electron-builder**
 
 #### Build SafeWallet
-You must have `node.js` and `npm` installed on your machine.
-Dependencies Wine1.8
+You must have `node.js (v7.10.1)` and `npm (4.2.0)` installed on your machine.
+Dependencies `Wine1.8`
 Clone Safewallet Desktop App with FairExchange-GUI submodule
 ```shell
 1) git clone https://github.com/fair-exchange/safewallet 
