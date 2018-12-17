@@ -57,11 +57,12 @@ You must have `node.js (v7.10.1)` and `npm (4.2.0)` installed on your machine.
 Dependencies `Wine1.8`
 Clone Safewallet Desktop App with FairExchange-GUI submodule
 ```shell
-1) git clone https://github.com/fair-exchange/safewallet 
-2) cd safewallet
-3) ./buildscripts/fairexchange-build.sh
-4) npm install -y 
-5)
+1) nvm use 7.10.1
+2) git clone https://github.com/fair-exchange/safewallet 
+3) cd safewallet
+4) ./buildscripts/fairexchange-build.sh
+5) npm install -y 
+6)
 ```
 
 ##### Linux
