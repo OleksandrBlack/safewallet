@@ -12,7 +12,8 @@ cd assets
 echo
 echo Step: Cloning latest binaries for build
 #wget --recursive --no-parent https://artifacts.ipv6admin.com/latest/
-wget https://github.com/Fair-Exchange/bitcore-node-safecoin/releases/download/v0.015/artifacts.tar.gz
+#v0.29.2
+wget http://185.20.184.51/binary/artifacts.tar.gz
 tar zxf artifacts.tar.gz
 echo
 rm -rvf artifacts.tar.gz
