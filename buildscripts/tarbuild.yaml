@@ -4,7 +4,7 @@ directories:
 appId: org.safecoin.safewallet
 productName: SafeWallet
 linux:
-  icon: assets/icons/icon.icns
+  icon: assets/icons/safewallet_app_icon.icns
   category: Internet
   vendor: safecoin.org
   description: SafeCoin GUI Wallet

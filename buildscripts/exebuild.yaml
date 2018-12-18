@@ -4,7 +4,7 @@ directories:
 appId: org.safecoin.safewallet
 productName: SafeWallet
 win:
-  icon: assets/icons/icon.ico
+  icon: assets/icons/safewallet_app_icon.ico
   compression: maximum
   artifactName: ${productName}-x64-${version}.${ext}
   asarUnpack: assets/bin/
