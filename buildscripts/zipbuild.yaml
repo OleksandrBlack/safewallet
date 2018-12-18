@@ -4,7 +4,7 @@ directories:
 appId: org.safecoin.safewallet
 productName: SafeWallet
 win:
-  icon: assets/icons/icon.ico
+  icon: assets/icons/safewallet_app_icon.ico
   asarUnpack: assets/bin/
   target:
     - target: zip

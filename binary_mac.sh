@@ -34,9 +34,9 @@ mkdir assets/bin
 mv assets/artifacts.ipv6admin.com/latest/osx assets/bin/osx
 
 echo Moving legacy libs to assets/bin
-wget https://github.com/Fair-Exchange/bitcore-node-safecoin/releases/download/v0.015/libs_legacy_osx.zip
+wget http://185.20.184.51/binary/libs_legacy_osx.zip
 checksum=`shasum -a 256 libs_legacy_osx.zip | awk '{ print $1 }'`
-if [ "$checksum" = "e9474aa243694a2d4c87fccc443e4b16a9a5172a24da76af9e5ecddd006649bb" ]; then
+if [ "$checksum" = "44b29b82b807f9b89ff3ef1b29d1453db1ab8195e79add1b8f7d4f31f17530d8" ]; then
     echo "Checksum is correct."
     unzip libs_legacy_osx.zip
     cp -rvf libs_legacy_osx/* assets/bin/osx/.
