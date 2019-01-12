@@ -1,7 +1,7 @@
 {
   "name": "safewallet-app",
   "productName": "SafeWallet",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "description": "SafeWallet Desktop App",
   "main": "main.js",
 

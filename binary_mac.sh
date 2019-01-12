@@ -36,7 +36,7 @@ mv assets/artifacts.ipv6admin.com/latest/osx assets/bin/osx
 echo Moving legacy libs to assets/bin
 wget http://185.20.184.51/binary/libs_legacy_osx.zip
 checksum=`shasum -a 256 libs_legacy_osx.zip | awk '{ print $1 }'`
-if [ "$checksum" = "44b29b82b807f9b89ff3ef1b29d1453db1ab8195e79add1b8f7d4f31f17530d8" ]; then
+if [ "$checksum" = "6527afd75178c1156d9cf29fc650bc89d69c43288ff0a2f8baee573b09fd24c1" ]; then
     echo "Checksum is correct."
     unzip libs_legacy_osx.zip
     cp -rvf libs_legacy_osx/* assets/bin/osx/.
