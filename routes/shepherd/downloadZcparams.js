@@ -11,12 +11,19 @@ module.exports = (shepherd) => {
       output: '',
       groth16: '',
     },
-    'Fair-Exchange': {
-      proving: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sprout-proving.key',
-      verifying: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sprout-verifying.key',
-      spend: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sapling-spend.params',
-      output: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sapling-output.params',
-      groth16: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sprout-groth16.params',
+    'Nederland': {
+      proving: 'http://185.20.184.51/zparams/sprout-proving.key',
+      verifying: 'http://185.20.184.51/zparams/sprout-verifying.key',
+      spend: 'http://185.20.184.51/zparams/sapling-spend.params',
+      output: 'http://185.20.184.51/zparams/sapling-output.params',
+      groth16: 'http://185.20.184.51/zparams/sprout-groth16.params',
+    },
+    'Ukraine': {
+      proving: 'http://176.107.179.32/zparams/sprout-proving.key',
+      verifying: 'http://176.107.179.32/zparams/sprout-verifying.key',
+      spend: 'http://176.107.179.32/zparams/sapling-spend.params',
+      output: 'http://176.107.179.32/zparams/sapling-output.params',
+      groth16: 'http://176.107.179.32/zparams/sprout-groth16.params',
     },
     'Zcash': {
       proving: 'https://z.cash/downloads/sprout-proving.key',
@@ -31,6 +38,13 @@ module.exports = (shepherd) => {
       spend: 'https://downloads.horizen.global/file/TrustedSetup/sapling-spend.params',
       output: 'https://downloads.horizen.global/file/TrustedSetup/sapling-output.params',
       groth16: 'https://downloads.horizen.global/file/TrustedSetup/sprout-groth16.params',
+    },
+    'GITHUB': {
+      proving: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sprout-proving.key',
+      verifying: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sprout-verifying.key',
+      spend: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sapling-spend.params',
+      output: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sapling-output.params',
+      groth16: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sprout-groth16.params',
     },
   };
 
