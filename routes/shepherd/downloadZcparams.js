@@ -11,7 +11,14 @@ module.exports = (shepherd) => {
       output: '',
       groth16: '',
     },
-    'z.cash': {
+    'Fair-Exchange': {
+      proving: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sprout-proving.key',
+      verifying: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sprout-verifying.key',
+      spend: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sapling-spend.params',
+      output: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sapling-output.params',
+      groth16: 'https://github.com/Fair-Exchange/safewallet/releases/download/data/sprout-groth16.params',
+    },
+    'Zcash': {
       proving: 'https://z.cash/downloads/sprout-proving.key',
       verifying: 'https://z.cash/downloads/sprout-verifying.key',
       spend: 'https://z.cash/downloads/sapling-spend.params',
