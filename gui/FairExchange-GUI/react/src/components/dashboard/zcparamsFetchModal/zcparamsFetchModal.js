@@ -20,6 +20,9 @@ let updateProgressBar = {
   zcparams: {
     proving: -1,
     verifying: -1,
+    output: -1,
+    spend: -1,
+    groth16: -1,
   },
 };
 
@@ -43,6 +46,9 @@ class ZcparamsFetchModal extends React.Component {
     updateProgressBar.zcparams = {
       proving: 0,
       verifying: 0,
+      output: 0,
+      spend: 0,
+      groth16: 0,
     };
     _updateLog.push(`${ translate('ZCPARAMS_FETCH.DOWNLOADING_ZCASH_KEYS') }...`);
     this.setState(Object.assign({}, this.state, {
@@ -153,12 +159,37 @@ class ZcparamsFetchModal extends React.Component {
         <div className="padding-top-20 zcparams-progress">
           <h5>{ translate('SETTINGS.PROGRESS') }</h5>
           <div className="padding-bottom-15">{ items }</div>
+
           <div className={ updateProgressBar.zcparams.proving > -1 && !this.state.done ? 'progress progress-sm' : 'hide' }>
             <div
               className="progress-bar progress-bar-striped active progress-bar-indicating progress-bar-success font-size-80-percent"
               style={{ width: `${updateProgressBar.zcparams.proving}%` }}>
             </div>
           </div>
+          <div className={ updateProgressBar.zcparams.verifying > -1 && !this.state.done ? 'progress progress-sm' : 'hide' }>
+              <div
+                className="progress-bar progress-bar-striped active progress-bar-indicating progress-bar-success font-size-80-percent"
+                style={{ width: `${updateProgressBar.zcparams.verifying}%` }}>
+              </div>
+          </div>
+          <div className={ updateProgressBar.zcparams.spend > -1 && !this.state.done ? 'progress progress-sm' : 'hide' }>
+              <div
+                className="progress-bar progress-bar-striped active progress-bar-indicating progress-bar-success font-size-80-percent"
+                style={{ width: `${updateProgressBar.zcparams.spend}%` }}>
+              </div>
+            </div>
+          <div className={ updateProgressBar.zcparams.output > -1 && !this.state.done ? 'progress progress-sm' : 'hide' }>
+              <div
+                className="progress-bar progress-bar-striped active progress-bar-indicating progress-bar-success font-size-80-percent"
+                style={{ width: `${updateProgressBar.zcparams.output}%` }}>
+              </div>
+            </div>
+          <div className={ updateProgressBar.zcparams.groth16 > -1 && !this.state.done ? 'progress progress-sm' : 'hide' }>
+              <div
+                className="progress-bar progress-bar-striped active progress-bar-indicating progress-bar-success font-size-80-percent"
+                style={{ width: `${updateProgressBar.zcparams.groth16}%` }}>
+              </div>
+            </div>
         </div>
       );
     } else {

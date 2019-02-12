@@ -258,6 +258,12 @@ module.exports = (shepherd) => {
                           error: 'run -reindex',
                         },
                       });
+                    } else if (error.toString().indexOf('need to resync') > -1) {
+                      shepherd.io.emit('service', {
+                        safecoind: {
+                          error: 'run -reindex',
+                        },
+                      });
                     }
                   }
                 });
@@ -383,6 +389,12 @@ module.exports = (shepherd) => {
                         error: 'run -reindex',
                       },
                     });
+                  } else if (error.toString().indexOf('need to resync') > -1) {
+                    shepherd.io.emit('service', {
+                      safecoind: {
+                        error: 'run -reindex',
+                      },
+                    });
                   }
                 }
               });
@@ -398,6 +410,12 @@ module.exports = (shepherd) => {
                   shepherd.writeLog(`exec error: ${error}`);
 
                   if (error.toString().indexOf('using -reindex') > -1) {
+                    shepherd.io.emit('service', {
+                      safecoind: {
+                        error: 'run -reindex',
+                      },
+                    });
+                  } else if (error.toString().indexOf('need to resync') > -1) {
                     shepherd.io.emit('service', {
                       safecoind: {
                         error: 'run -reindex',
@@ -511,20 +529,6 @@ module.exports = (shepherd) => {
     switch (flock) {
       case 'safecoind':
         DaemonConfPath = `${shepherd.safecoinDir}/safecoin.conf`;
-
-        if (_platform === 'win32') {
-          DaemonConfPath = path.normalize(DaemonConfPath);
-        }
-        break;
-      case 'zcashd':
-        DaemonConfPath = `${shepherd.ZcashDir}/zcash.conf`;
-
-        if (_platform === 'win32') {
-          DaemonConfPath = path.normalize(DaemonConfPath);
-        }
-        break;
-      case 'chipsd':
-        DaemonConfPath = `${shepherd.chipsDir}/chips.conf`;
 
         if (_platform === 'win32') {
           DaemonConfPath = path.normalize(DaemonConfPath);
@@ -719,30 +723,16 @@ module.exports = (shepherd) => {
             return new Promise((resolve, reject) => {
               const result = 'checking addnode...';
 
-              if (flock === 'chipsd' ||
-                  flock === 'safecoind') {
+              if (flock === 'safecoind') {
                 if (status[0].hasOwnProperty('addnode')) {
                   shepherd.log('addnode: OK');
                   shepherd.writeLog('addnode: OK');
                 } else {
                   let nodesList;
 
-                  if (flock === 'chipsd') {
-                    nodesList = '\naddnode=95.110.191.193' +
-                    '\naddnode=144.76.167.66' +
-                    '\naddnode=158.69.248.93' +
-                    '\naddnode=149.202.49.218' +
-                    '\naddnode=95.213.205.222' +
-                    '\naddnode=5.9.253.198' +
-                    '\naddnode=164.132.224.253' +
-                    '\naddnode=163.172.4.66' +
-                    '\naddnode=217.182.194.216' +
-                    '\naddnode=94.130.96.114' +
-                    '\naddnode=5.9.253.195';
-                  } else if (flock === 'safecoind') {
-                    nodesList = '\naddnode=149.28.239.233' +
-                    '\naddnode=8.12.22.254' +
-                    '\naddnode=140.82.11.189';
+                  if (flock === 'safecoind') {
+                    nodesList = '\naddnode=explorer.safecoin.org' +
+                    '\naddnode=explorer.deepsky.space';
                   }
 
                   shepherd.log('addnode: NOT FOUND');

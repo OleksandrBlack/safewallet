@@ -4,29 +4,26 @@ const Promise = require('bluebird');
 
 module.exports = (shepherd) => {
   shepherd.zcashParamsDownloadLinks = {
-    'no download source selected': {        // dummy
-      proving: 'https://forge.plus/sprout-proving.key',
-      verifying: 'https://forge.plus/sprout-verifying.key',
+    'no download source selected': {
+      proving: '',
+      verifying: '',
+      spend: '',
+      output: '',
+      groth16: '',
     },
-    'Main Download Link': {
-      proving: 'https://forge.plus/sprout-proving.key',
-      verifying: 'https://forge.plus/sprout-verifying.key',
-    },
-    'zcash.dl.mercerweiss.com': {
+    'z.cash': {
       proving: 'https://z.cash/downloads/sprout-proving.key',
       verifying: 'https://z.cash/downloads/sprout-verifying.key',
+      spend: 'https://z.cash/downloads/sapling-spend.params',
+      output: 'https://z.cash/downloads/sapling-output.params',
+      groth16: 'https://z.cash/downloads/sprout-groth16.params',
     },
-    'Nederland': {
-      proving: 'http://185.20.184.51/zparams/sprout-proving.key',
-      verifying: 'http://185.20.184.51/zparams/sprout-verifying.key',
-    },
-    'USA': {
-      proving: 'https://assets.anonfork.io/sprout-proving.key',
-      verifying: 'https://assets.anonfork.io/sprout-verifying.key',
-    },
-    'Ukraine': {
-      proving: 'http://176.107.179.32/zparams/sprout-proving.key',
-      verifying: 'http://176.107.179.32/zparams/sprout-verifying.key',
+    'Horizen': {
+      proving: 'https://downloads.horizen.global/file/TrustedSetup/sprout-proving.key',
+      verifying: 'https://downloads.horizen.global/file/TrustedSetup/sprout-verifying.key',
+      spend: 'https://downloads.horizen.global/file/TrustedSetup/sapling-spend.params',
+      output: 'https://downloads.horizen.global/file/TrustedSetup/sapling-output.params',
+      groth16: 'https://downloads.horizen.global/file/TrustedSetup/sprout-groth16.params',
     },
   };
 
@@ -37,21 +34,42 @@ module.exports = (shepherd) => {
       provingKeySize: false,
       verifyingKey: _fs.existsSync(`${shepherd.zcashParamsDir}/sprout-verifying.key`),
       verifyingKeySize: false,
+      spendKey: _fs.existsSync(`${shepherd.zcashParamsDir}/sapling-spend.params`),
+      spendKeySize: false,
+      outputKey: _fs.existsSync(`${shepherd.zcashParamsDir}/sapling-output.params`),
+      outputKeySize: false,
+      groth16Key: _fs.existsSync(`${shepherd.zcashParamsDir}/sprout-groth16.params`),
+      groth16KeySize: false,
       errors: false,
     };
 
     if (_checkList.rootDir &&
         _checkList.provingKey ||
-        _checkList.verifyingKey) {
+        _checkList.verifyingKey ||
+        _checkList.spendKey ||
+        _checkList.outputKey ||
+        _checkList.groth16Key) {
       // verify each key size
       const _provingKeySize = _checkList.provingKey ? fs.lstatSync(`${shepherd.zcashParamsDir}/sprout-proving.key`) : 0;
       const _verifyingKeySize = _checkList.verifyingKey ? fs.lstatSync(`${shepherd.zcashParamsDir}/sprout-verifying.key`) : 0;
+      const _spendKeySize = _checkList.spendKey ? fs.lstatSync(`${shepherd.zcashParamsDir}/sapling-spend.params`) : 0;
+      const _outputKeySize = _checkList.outputKey ? fs.lstatSync(`${shepherd.zcashParamsDir}/sapling-output.params`) : 0;
+      const _groth16KeySize = _checkList.groth16Key ? fs.lstatSync(`${shepherd.zcashParamsDir}/sprout-groth16.params`) : 0;
 
       if (Number(_provingKeySize.size) === 910173851) { // bytes
         _checkList.provingKeySize = true;
       }
       if (Number(_verifyingKeySize.size) === 1449) {
         _checkList.verifyingKeySize = true;
+      }
+      if (Number(_spendKeySize.size) === 47958396) {
+        _checkList.spendKeySize = true;
+      }
+      if (Number(_outputKeySize.size) === 3592860) {
+        _checkList.outputKeySize = true;
+      }
+      if (Number(_groth16KeySize.size) === 725523612) {
+        _checkList.groth16KeySize = true;
       }
 
       shepherd.log('zcashparams exist');
@@ -63,7 +81,13 @@ module.exports = (shepherd) => {
         !_checkList.provingKey ||
         !_checkList.verifyingKey ||
         !_checkList.provingKeySize ||
-        !_checkList.verifyingKeySize) {
+        !_checkList.verifyingKeySize ||
+        !_checkList.spendKey ||
+        !_checkList.outputKey ||
+        !_checkList.groth16Key ||
+        !_checkList.outputKeySize ||
+        !_checkList.spendKeySize ||
+        !_checkList.groth16KeySize) {
       _checkList.errors = true;
     }
 
@@ -76,7 +100,7 @@ module.exports = (shepherd) => {
       resolve(_verify);
     });
   };
-
+  
   /*
    *  Update bins
    *  type:
@@ -98,7 +122,7 @@ module.exports = (shepherd) => {
       for (let key in shepherd.zcashParamsDownloadLinks[dlOption]) {
         shepherd.downloadFile({
           remoteFile: shepherd.zcashParamsDownloadLinks[dlOption][key],
-          localFile: `${dlLocation}/sprout-${key}.key`,
+          localFile: key === 'spend' || key === 'output' ? `${dlLocation}/sapling-${key}.params` : (key === 'groth16' ? `${dlLocation}/sprout-${key}.params` : `${dlLocation}/sprout-${key}.key`),
           onProgress: (received, total) => {
             const percentage = (received * 100) / total;
 

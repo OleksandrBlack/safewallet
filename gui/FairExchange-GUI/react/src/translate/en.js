@@ -622,6 +622,12 @@ export const LANG_EN = {
     'ZCASH_PARAMS_MISSING_VERIFYING_KEY': '- missing verifying key',
     'ZCASH_PARAMS_MISSING_PROVING_KEY_SIZE': '- proving key size is incorrect',
     'ZCASH_PARAMS_MISSING_VERIFYING_KEY_SIZE': '- verifying key size is incorrect',
+    'ZCASH_PARAMS_MISSING_SPEND_PARAMS': '- missing spend params',
+    'ZCASH_PARAMS_MISSING_OUTPUT_PARAMS': '- missing output params',
+    'ZCASH_PARAMS_MISSING_GROTH16_PARAMS': '- missing groth16 params',
+    'ZCASH_PARAMS_MISSING_SPEND_PARAMS_SIZE': '- spend params size is incorrect',
+    'ZCASH_PARAMS_MISSING_OUTPUT_PARAMS_SIZE': '- output params size is incorrect',
+    'ZCASH_PARAMS_MISSING_GROTH16_PARAMS_SIZE': '- groth16 params size is incorrect',
   },
   'LOGIN': {
     'OR_USE_A_SHORTCUT': 'or use a shortcut',
