@@ -32,7 +32,7 @@
   "author": "SafeCoin DEV Team <safe@safecoin.org>",
   "license": "MIT",
   "devDependencies": {
-    "electron-builder": "^20.38.3",
+    "electron-builder": "20.28.4",
     "electron": "2.0.8"
   },
   "dependencies": {
