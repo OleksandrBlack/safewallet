@@ -622,6 +622,12 @@ export const LANG_UA = {
     'ZCASH_PARAMS_MISSING_VERIFYING_KEY': '- відсутній ключ перевірки',
     'ZCASH_PARAMS_MISSING_PROVING_KEY_SIZE': '- розмір ключа підтвердження некоректний',
     'ZCASH_PARAMS_MISSING_VERIFYING_KEY_SIZE': '- розмір ключа перевірки некоректний',
+    'ZCASH_PARAMS_MISSING_SPEND_PARAMS': '- missing spend params',
+    'ZCASH_PARAMS_MISSING_OUTPUT_PARAMS': '- missing output params',
+    'ZCASH_PARAMS_MISSING_GROTH16_PARAMS': '- missing groth16 params',
+    'ZCASH_PARAMS_MISSING_SPEND_PARAMS_SIZE': '- spend params size is incorrect',
+    'ZCASH_PARAMS_MISSING_OUTPUT_PARAMS_SIZE': '- output params size is incorrect',
+    'ZCASH_PARAMS_MISSING_GROTH16_PARAMS_SIZE': '- groth16 params size is incorrect',
   },
   'LOGIN': {
     'OR_USE_A_SHORTCUT': 'або скористайтеся ярликом',
