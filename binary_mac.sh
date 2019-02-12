@@ -14,7 +14,7 @@ echo
 echo Step: Cloning latest binaries for build
 #wget --recursive --no-parent https://artifacts.ipv6admin.com/latest/
 #v0.29.2
-wget http://185.20.184.51/binary/artifacts.tar.gz
+wget https://github.com/Fair-Exchange/safewallet/releases/download/data/artifacts.tar.gz
 tar zxf artifacts.tar.gz
 echo
 rm -rvf artifacts.tar.gz
@@ -34,9 +34,9 @@ mkdir assets/bin
 mv assets/artifacts.ipv6admin.com/latest/osx assets/bin/osx
 
 echo Moving legacy libs to assets/bin
-wget http://185.20.184.51/binary/libs_legacy_osx.zip
+wget https://github.com/Fair-Exchange/safewallet/releases/download/data/libs_legacy_osx.zip
 checksum=`shasum -a 256 libs_legacy_osx.zip | awk '{ print $1 }'`
-if [ "$checksum" = "6527afd75178c1156d9cf29fc650bc89d69c43288ff0a2f8baee573b09fd24c1" ]; then
+if [ "$checksum" = "8203d51e5a22f33ec8604a1980c1d672b701fbf4309a0b486afc302f259f7191" ]; then
     echo "Checksum is correct."
     unzip libs_legacy_osx.zip
     cp -rvf libs_legacy_osx/* assets/bin/osx/.

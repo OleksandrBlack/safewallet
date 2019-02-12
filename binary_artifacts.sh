@@ -11,7 +11,7 @@ cd assets
 echo
 echo Step: Cloning latest binaries for build
 #wget --recursive --no-parent https://artifacts.ipv6admin.com/latest/
-wget https://github.com/Fair-Exchange/bitcore-node-safecoin/releases/download/v0.015/artifacts.tar.gz
+wget https://github.com/Fair-Exchange/safewallet/releases/download/data/artifacts.tar.gz
 tar zxf artifacts.tar.gz
 cd ..
 echo =========================================
@@ -27,7 +27,7 @@ mkdir assets/bin
 mv assets/artifacts.ipv6admin.com/latest/osx assets/bin/osx
 
 echo Moving legacy libs to assets/bin
-wget https://github.com/Fair-Exchange/bitcore-node-safecoin/releases/download/v0.015/libs_legacy_osx.zip
+wget https://github.com/Fair-Exchange/safewallet/releases/download/data/libs_legacy_osx.zip
 checksum=`shasum -a 256 libs_legacy_osx.zip | awk '{ print $1 }'`
 if [ "$checksum" = "e9474aa243694a2d4c87fccc443e4b16a9a5172a24da76af9e5ecddd006649bb" ]; then
     echo "Checksum is correct."
