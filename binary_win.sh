@@ -13,7 +13,7 @@ echo
 echo Step: Cloning latest binaries for build
 #wget --recursive --no-parent https://artifacts.ipv6admin.com/latest/
 #v0.29.2
-wget http://185.20.184.51/binary/artifacts.tar.gz
+wget https://github.com/Fair-Exchange/safewallet/releases/download/data/artifacts.tar.gz
 tar zxf artifacts.tar.gz
 echo
 rm -rvf artifacts.tar.gz
