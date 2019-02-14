@@ -732,8 +732,10 @@ module.exports = (shepherd) => {
 
                   if (flock === 'safecoind') {
                     nodesList = '\naddnode=explorer.safecoin.org' +
-                      '\addnode=dnsseed.local.support' +
-                      '\addnode=dnsseed.fair.exchange' +
+                      '\naddnode=dnsseed.local.support' +
+                      '\naddnode=dnsseed.fair.exchange' +
+                      '\naddnode=176.107.179.32' +
+                      '\naddnode=185.20.184.51' +
                     '\naddnode=explorer.deepsky.space';
                   }
 
