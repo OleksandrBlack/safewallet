@@ -282,7 +282,7 @@ module.exports = (api) => {
       'via',
       'fair',
       'doge',
-      'kmd',
+      'safe',
       'mona',
     ];
 
@@ -434,7 +434,7 @@ module.exports = (api) => {
   api.post('/electrum/seed/bip39/match', (req, res, next) => {
     if (api.checkToken(req.body.token)) {
       const seed = bip39.mnemonicToSeed(req.body.seed);
-      const hdMaster = bitcoin.HDNode.fromSeedBuffer(seed, api.electrumJSNetworks.komodo);
+      const hdMaster = bitcoin.HDNode.fromSeedBuffer(seed, api.electrumJSNetworks.safecoin);
       const matchPattern = req.body.match;
       const _defaultAddressDepth = req.body.addressdepth;
       const _defaultAccountCount = req.body.accounts;
