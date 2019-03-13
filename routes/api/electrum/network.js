@@ -47,8 +47,8 @@ module.exports = (api) => {
       coin = network.toUpperCase();
     }
 
-    if (network.toLowerCase() === 'vrsc') {
-      return api.electrumJSNetworks.vrsc;
+    if (network.toLowerCase() === 'safe') {
+      return api.electrumJSNetworks.safe;
     }
 
     if (isSafecoinCoin(coin) ||

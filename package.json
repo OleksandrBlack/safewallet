@@ -4,19 +4,17 @@
   "version": "0.0.34",
   "description": "SafeWallet Desktop App",
   "main": "main.js",
-
   "scripts": {
     "start": "electron .",
     "make-patch": "./make-patch.sh",
     "make-rpm": "node make-rpm.js",
     "make-deb": "node make-deb.js",
-	"dist": "rm -r dist/* && build -wl",
-	"dist-lin-deb": "sh binary_lin.sh && build -l --config=buildscripts/debbuild.yaml && mkdir -p ~/wallets/ && cp dist/*.deb ~/wallets/ && rm -r dist/*",
-	"dist-lin-tar": "sh binary_lin.sh && build -l --config=buildscripts/tarbuild.yaml && mkdir -p ~/wallets/ && cp dist/*.gz ~/wallets/ && rm -r dist/*",
-	"dist-win-exe": "sh binary_win.sh && build -w --config=buildscripts/exebuild.yaml && mkdir -p ~/wallets/ && cp dist/*.exe ~/wallets/ && rm -r dist/*",
-	"dist-win-zip": "sh binary_win.sh && build -w --config=buildscripts/zipbuild.yaml && mkdir -p ~/wallets/ && cp dist/*.zip ~/wallets/ && rm -r dist/*",
-	"dist-mac-zip": "sh binary_mac.sh && build -m --config=buildscripts/macbuild.yaml && mkdir -p ~/wallets/ && cp dist/*.zip ~/wallets/ && rm -r dist/*"
-	
+    "dist": "rm -r dist/* && build -wl",
+    "dist-lin-deb": "sh binary_lin.sh && build -l --config=buildscripts/debbuild.yaml && mkdir -p ~/wallets/ && cp dist/*.deb ~/wallets/ && rm -r dist/*",
+    "dist-lin-tar": "sh binary_lin.sh && build -l --config=buildscripts/tarbuild.yaml && mkdir -p ~/wallets/ && cp dist/*.gz ~/wallets/ && rm -r dist/*",
+    "dist-win-exe": "sh binary_win.sh && build -w --config=buildscripts/exebuild.yaml && mkdir -p ~/wallets/ && cp dist/*.exe ~/wallets/ && rm -r dist/*",
+    "dist-win-zip": "sh binary_win.sh && build -w --config=buildscripts/zipbuild.yaml && mkdir -p ~/wallets/ && cp dist/*.zip ~/wallets/ && rm -r dist/*",
+    "dist-mac-zip": "sh binary_mac.sh && build -m --config=buildscripts/macbuild.yaml && mkdir -p ~/wallets/ && cp dist/*.zip ~/wallets/ && rm -r dist/*"
   },
   "repository": "https://github.com/fair-exchange/Safewallet/",
   "homepage": "https://safecoin.org/",

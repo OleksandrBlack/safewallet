@@ -127,7 +127,7 @@ module.exports = (api) => {
 
     let versionNum;
     if ((utxo[0].currentHeight >= 419200 && network === 'zec') || 
-        (utxo[0].currentHeight >= 227520 && network === 'vrsc')){
+        (utxo[0].currentHeight >= 227520 && network === 'safe')){
       versionNum = 4;
     } else {
       if (network === 'zec') {
@@ -150,7 +150,7 @@ module.exports = (api) => {
         );
       } else {
         if (network === 'zec' ||
-            network === 'vrsc') {
+            network === 'safe') {
           tx.sign(i, key, '', null, utxo[i].value);
         } else {
           tx.sign(i, key);

@@ -1,14 +1,16 @@
 'use strict'
 const bitcoin = require('bitcoinjs-lib');
+
 let networks = exports;
 Object.keys(bitcoin.networks).forEach((key) => {
   networks[key] = bitcoin.networks[key];
 });
-
-
+=======
+let networks = require('agama-wallet-lib/src/bitcoinjs-networks');
 const {
   zec,
-  safe,
+    safe,
+    safe
 } = require('bitgo-utxo-lib/src/networks');
 
 networks.zec = zec;
