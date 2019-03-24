@@ -8,13 +8,10 @@ Object.keys(bitcoin.networks).forEach((key) => {
 
 const {
   zec,
-  safe,
+  safecoin,
 } = require('bitgo-utxo-lib/src/networks');
 
-networks.zec = zec;
-networks.zec.overwinter = true;
-networks.safe = safe;
-networks.safe.overwinter = true;
+
 
 // https://github.com/Fair-Exchange/safecoin/blob/master/src/chainparams.cpp
 networks.safecoin = {
@@ -28,6 +25,7 @@ networks.safecoin = {
   wif: 0xbd,
   dustThreshold: 1000,
   isZcash: true,
+  overwinter:true,
 };
 
 networks.btcz = {

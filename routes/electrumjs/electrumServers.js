@@ -6,8 +6,8 @@ let electrumServers = {
     txfee: 10000,
     abbr: 'SAFE',
     serverList: [
+      'dev.local.support:10001',
       'local.support:10001',
-      'electrum.safc.cc:10001',
       'electrumnld.safecoin.org:10001'
     ],
   },

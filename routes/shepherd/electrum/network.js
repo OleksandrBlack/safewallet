@@ -12,8 +12,8 @@ module.exports = (shepherd) => {
 //        network === 'anon' ||
         network === 'ZCL' ||
         network === 'zcl' ||
-        network === 'XSG' ||
-        network === 'xsg') {
+        network === 'Safecoin' ||
+        network === 'safecoin') {
       return true;
     }
   };

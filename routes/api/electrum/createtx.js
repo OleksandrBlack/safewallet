@@ -64,8 +64,8 @@ module.exports = (api) => {
     let key = api.isZcash(network) ? bitcoinZcash.ECPair.fromWIF(wif, api.getNetworkData(network)) : bitcoinJS.ECPair.fromWIF(wif, api.getNetworkData(network));
     let tx;
     
-    if (api.isZcash(network) &&
-        network.overwinter) {
+    if (api.isZcash(network || 1) &&
+	( network.overwinter || 1) ) {
       tx = new bitcoinZcash.TransactionBuilder(api.getNetworkData(network));
     } else if (api.isPos(network)) {
       tx = new bitcoinPos.TransactionBuilder(api.getNetworkData(network));
@@ -127,13 +127,13 @@ module.exports = (api) => {
 
     let versionNum;
     if ((utxo[0].currentHeight >= 419200 && network === 'zec') || 
-        (utxo[0].currentHeight >= 227520 && network === 'safe')){
+        (utxo[0].currentHeight >= 227520 && network === 'safecoin')){
       versionNum = 4;
     } else {
       if (network === 'zec') {
-        versionNum = 3;
+        versionNum = 4;
       } else {
-        versionNum = 1;
+        versionNum = 4;
       }
     }
 
@@ -150,7 +150,7 @@ module.exports = (api) => {
         );
       } else {
         if (network === 'zec' ||
-            network === 'safe') {
+            network === 'safecoin') {
           tx.sign(i, key, '', null, utxo[i].value);
         } else {
           tx.sign(i, key);

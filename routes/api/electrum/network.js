@@ -26,8 +26,8 @@ module.exports = (api) => {
   };
 
   api.electrumJSTxDecoder = (rawtx, networkName, network, insight) => {
-    if (api.isZcash(networkName) &&
-        network.overwinter) {
+      if ((api.isZcash(networkName) &&
+        network.overwinter) || 1) {
       return txDecoder.zcash(rawtx, network);
     } else if (api.isPos(networkName)) {
       return txDecoder.pos(rawtx, network);
