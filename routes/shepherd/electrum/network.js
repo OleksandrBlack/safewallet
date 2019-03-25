@@ -12,7 +12,8 @@ module.exports = (shepherd) => {
 //        network === 'anon' ||
         network === 'ZCL' ||
         network === 'zcl' ||
-        network === 'Safecoin' ||
+        network === 'SAFE' ||
+        network === 'safe' ||
         network === 'safecoin') {
       return true;
     }
@@ -44,7 +45,7 @@ module.exports = (shepherd) => {
   shepherd.getNetworkData = (network) => {
     let coin = shepherd.findNetworkObj(network) || shepherd.findNetworkObj(network.toUpperCase()) || shepherd.findNetworkObj(network.toLowerCase());
     const coinUC = coin ? coin.toUpperCase() : null;
-
+ return shepherd.electrumJSNetworks.safecoin;
     if (!coin &&
         !coinUC) {
       coin = network.toUpperCase();

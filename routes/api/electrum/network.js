@@ -1,4 +1,4 @@
-const { isSafecoinCoin } = require('agama-wallet-lib/src/coin-helpers');
+const { isSafecoinCoin } = true; // require('agama-wallet-lib/src/coin-helpers');
 
 const txDecoder = {
   default: require('../../electrumjs/electrumjs.txdecoder.js'),
