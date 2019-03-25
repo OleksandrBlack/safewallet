@@ -1,6 +1,6 @@
 const bitcoinJS = require('bitcoinjs-lib');
 const bitcoinJSForks = require('bitcoinforkjs-lib');
-const bitcoinZcash = require('bitcoinjs-lib-zcash');
+const bitcoinZcash = require('bitgo-utxo-lib');
 const bitcoinPos = require('bitcoinjs-lib-pos');
 const coinSelect = require('coinselect');
 
@@ -128,10 +128,15 @@ module.exports = (shepherd) => {
           key
         );
       } else {
+
+        if (network === 'safeoin' || 1 ) {
+	          tx.sign(i, key, '', null, utxo[i].value);
+      } else {	  
         tx.sign(i, key);
       }
     }
-
+    }
+      
     const rawtx = tx.build().toHex();
 
     shepherd.log('buildSignedTx signed tx hex', true);
