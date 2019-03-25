@@ -127,13 +127,13 @@ module.exports = (api) => {
 
     let versionNum;
     if ((utxo[0].currentHeight >= 419200 && network === 'zec') || 
-        (utxo[0].currentHeight >= 227520 && network === 'safecoin')){
+        (utxo[0].currentHeight >= 547421 && network === 'safecoin')){
       versionNum = 4;
     } else {
       if (network === 'zec') {
-        versionNum = 4;
+        versionNum = 3;
       } else {
-        versionNum = 4;
+        versionNum = 1;
       }
     }
 
