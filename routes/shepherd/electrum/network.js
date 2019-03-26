@@ -31,7 +31,7 @@ module.exports = (shepherd) => {
 };
 
   shepherd.electrumJSTxDecoder = (rawtx, networkName, network, insight) => {
-    if (shepherd.isZcash(networkName)) {
+      if ((shepherd.isZcash(networkName) && network.overwinter) ) {
       return txDecoder.zcash(rawtx, network);
     } else if (shepherd.isPos(networkName)) {
       return txDecoder.pos(rawtx, network);
@@ -41,7 +41,6 @@ module.exports = (shepherd) => {
       return txDecoder.default(rawtx, network);
     }
   };
-
   shepherd.getNetworkData = (network) => {
     let coin = shepherd.findNetworkObj(network) || shepherd.findNetworkObj(network.toUpperCase()) || shepherd.findNetworkObj(network.toLowerCase());
     const coinUC = coin ? coin.toUpperCase() : null;
