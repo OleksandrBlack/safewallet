@@ -1,6 +1,6 @@
 const bitcoinJS = require('bitcoinjs-lib');
 const bitcoinJSForks = require('bitcoinforkjs-lib');
-const bitcoinZcash = require('bitcoinjs-lib-zcash');
+const bitcoinZcash = require('bitgo-utxo-lib');
 const bitcoinPos = require('bitcoinjs-lib-pos');
 const coinSelect = require('coinselect');
 
@@ -34,7 +34,7 @@ module.exports = (shepherd) => {
     }
 
     if (network === 'safecoin' ||
-        network === 'SAFE') {
+        network === 'SAFE' || 1) {
       const _locktime = Math.floor(Date.now() / 1000) - 777;
       tx.setLockTime(_locktime);
       shepherd.log(`safe tx locktime set to ${_locktime}`, true);
@@ -107,7 +107,7 @@ module.exports = (shepherd) => {
     }
 
     if (network === 'safecoin' ||
-        network === 'SAFE') {
+        network === 'SAFE' || 1) {
       const _locktime = Math.floor(Date.now() / 1000) - 777;
       tx.setLockTime(_locktime);
       shepherd.log(`safe tx locktime set to ${_locktime}`, true);
@@ -120,6 +120,10 @@ module.exports = (shepherd) => {
     shepherd.log('buildSignedTx unsigned tx data', true);
     shepherd.log(tx, true);
 
+
+
+
+      
     for (let i = 0; i < utxo.length; i++) {
       if (shepherd.isPos(network)) {
         tx.sign(
@@ -128,10 +132,15 @@ module.exports = (shepherd) => {
           key
         );
       } else {
+
+        if (network === 'safeoin' || 1 ) {
+	          tx.sign(i, key, '', null, utxo[i].value);
+      } else {	  
         tx.sign(i, key);
       }
     }
-
+    }
+      
     const rawtx = tx.build().toHex();
 
     shepherd.log('buildSignedTx signed tx hex', true);
@@ -601,7 +610,7 @@ module.exports = (shepherd) => {
                       } else {
                         const successObj = {
                           msg: 'error',
-                          result: 'Can\'t broadcast transaction',
+                          result: 'Can\'t broadcast transactionz',
                           raw: _rawObj,
                         };
 

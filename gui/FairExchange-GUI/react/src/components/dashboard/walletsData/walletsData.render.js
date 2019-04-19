@@ -163,7 +163,7 @@ export const TxTypeRender = function(category) {
 
 export const TxAmountRender = function(tx) {
   let _amountNegative;
-
+  tx.interest=undefined;
   if ((tx.category === 'send' ||
       tx.category === 'sent') ||
       (tx.type === 'send' ||

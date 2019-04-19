@@ -1,18 +1,22 @@
 'use strict'
 const bitcoin = require('bitcoinjs-lib');
+
 let networks = exports;
 Object.keys(bitcoin.networks).forEach((key) => {
   networks[key] = bitcoin.networks[key];
 });
-
-
+=======
+let networks = require('agama-wallet-lib/src/bitcoinjs-networks');
 const {
   zec,
-  safecoin,
-  safe,
+    safe,
+    safe
 } = require('bitgo-utxo-lib/src/networks');
-//networks.safecoin = safecoin;
-//networks.safecoin.overwinter = true;
+
+networks.zec = zec;
+networks.zec.overwinter = true;
+networks.safe = safe;
+networks.safe.overwinter = true;
 
 // https://github.com/Fair-Exchange/safecoin/blob/master/src/chainparams.cpp
 networks.safecoin = {
@@ -26,7 +30,6 @@ networks.safecoin = {
   wif: 0xbd,
   dustThreshold: 1000,
   isZcash: true,
-  overwinter:true,
 };
 
 networks.btcz = {

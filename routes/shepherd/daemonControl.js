@@ -718,6 +718,32 @@ module.exports = (shepherd) => {
               resolve(result);
             });
           }
+		  
+          const txindex = () => {
+            return new Promise((resolve, reject) => {
+              const result = 'checking txindex...';
+
+              if (status[0].hasOwnProperty('txindex')) {
+                shepherd.log('txindex: OK');
+                shepherd.writeLog('txindex: OK');
+              } else {
+                shepherd.log('txindex: NOT FOUND');
+                shepherd.writeLog('txindex: NOT FOUND');
+
+                fs.appendFile(DaemonConfPath, '\ntxindex=1', (err) => {
+                  if (err) {
+                    shepherd.writeLog(`append daemon conf err: ${err}`);
+                    shepherd.log(`append daemon conf err: ${err}`);
+                  }
+                  // throw err;
+                  shepherd.log('txindex: ADDED');
+                  shepherd.writeLog('txindex: ADDED');
+                });
+              }
+
+              resolve(result);
+            });
+          }
 
           const addnode = () => {
             return new Promise((resolve, reject) => {
@@ -732,7 +758,11 @@ module.exports = (shepherd) => {
 
                   if (flock === 'safecoind') {
                     nodesList = '\naddnode=explorer.safecoin.org' +
-                    '\naddnode=explorer.deepsky.space';
+                      '\naddnode=dnsseed.local.support' +
+                      '\naddnode=dnsseed.fair.exchange' +
+                      '\naddnode=176.107.179.32' +
+                      '\naddnode=185.20.184.51' +
+                      '\naddnode=explorer.deepsky.space';
                   }
 
                   shepherd.log('addnode: NOT FOUND');
@@ -758,6 +788,7 @@ module.exports = (shepherd) => {
             return rpcpass();
           })
           .then(server)
+          .then(txindex)
           .then(rpcport)
           .then(addnode);
         });

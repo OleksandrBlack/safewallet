@@ -69,6 +69,8 @@ module.exports = (shepherd) => {
                               interest: Number(interest.toFixed(8)),
                               interestSats: Math.floor(interest * 100000000),
                               confirmations: Number(_utxoItem.height) === 0 ? 0 : currentHeight - _utxoItem.height,
+                              height: _utxoItem.height,
+                              currentHeight,
                               spendable: true,
                               verified: false,
                             };
@@ -100,6 +102,8 @@ module.exports = (shepherd) => {
                               amount: Number(_utxoItem.value) * 0.00000001,
                               amountSats: _utxoItem.value,
                               confirmations: Number(_utxoItem.height) === 0 ? 0 : currentHeight - _utxoItem.height,
+                              height: _utxoItem.height,
+                              currentHeight,
                               spendable: true,
                               verified: false,
                             };

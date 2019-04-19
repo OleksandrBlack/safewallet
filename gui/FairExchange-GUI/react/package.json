@@ -1,6 +1,6 @@
 {
   "name": "SafewalletGUI",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "description": "Safewallet GUI",
   "main": "src/index.js",
   "scripts": {
@@ -95,6 +95,7 @@
     "node-sass": "^4.5.0",
     "postcss-loader": "^1.1.1",
     "protractor": "^4.0.10",
+    "react-iframe": "1.1.0",
     "react-test-renderer": "^15.4.2",
     "redux-devtools": "^3.3.2",
     "sass-loader": "^5.0.1",
@@ -103,7 +104,6 @@
     "url-loader": "^0.5.7",
     "webpack": "^2.7.0",
     "webpack-dashboard": "^0.2.1",
-    "webpack-dev-server": "^2.2.1",
-    "react-iframe": "1.1.0"
+    "webpack-dev-server": "^2.2.1"
   }
 }

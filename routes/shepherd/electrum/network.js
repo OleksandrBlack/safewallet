@@ -12,8 +12,9 @@ module.exports = (shepherd) => {
 //        network === 'anon' ||
         network === 'ZCL' ||
         network === 'zcl' ||
-        network === 'XSG' ||
-        network === 'xsg') {
+        network === 'SAFE' ||
+        network === 'safe' ||
+        network === 'safecoin') {
       return true;
     }
   };
@@ -30,7 +31,7 @@ module.exports = (shepherd) => {
 };
 
   shepherd.electrumJSTxDecoder = (rawtx, networkName, network, insight) => {
-    if (shepherd.isZcash(networkName)) {
+      if ((shepherd.isZcash(networkName) && network.overwinter) ) {
       return txDecoder.zcash(rawtx, network);
     } else if (shepherd.isPos(networkName)) {
       return txDecoder.pos(rawtx, network);
@@ -40,11 +41,10 @@ module.exports = (shepherd) => {
       return txDecoder.default(rawtx, network);
     }
   };
-
   shepherd.getNetworkData = (network) => {
     let coin = shepherd.findNetworkObj(network) || shepherd.findNetworkObj(network.toUpperCase()) || shepherd.findNetworkObj(network.toLowerCase());
     const coinUC = coin ? coin.toUpperCase() : null;
-
+ return shepherd.electrumJSNetworks.safecoin;
     if (!coin &&
         !coinUC) {
       coin = network.toUpperCase();

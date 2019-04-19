@@ -1,5 +1,5 @@
 const bs58check = require('bs58check');
-const bitcoinZcash = require('bitcoinjs-lib-zcash');
+const bitcoinZcash = require('bitgo-utxo-lib');
 const bitcoin = require('bitcoinjs-lib');
 
 module.exports = (shepherd) => {
